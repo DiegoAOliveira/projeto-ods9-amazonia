@@ -55,4 +55,5 @@ Será desenvolvida em uma etapa posterior do projeto.
 A divisão de responsabilidades será definida pela equipe.
 
 11. Gestão do Projeto
+
 O projeto será gerenciado utilizando GitHub Projects (Kanban) e Issues
