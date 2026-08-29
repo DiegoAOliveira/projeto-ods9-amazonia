@@ -21,11 +21,17 @@ Conteúdo será desenvolvido pela equipe.
 Conteúdo será desenvolvido pela equipe.
 
 6. Áreas Monitoradas
+
 🛜 Conectividade
+
 ⚡ Energia
+
 🚰 Saneamento
+
 🚤 Logística
+
 🎓 Educação
+
 🌱 Meio Ambiente
 
 7. Modelagem Inicial — POO
