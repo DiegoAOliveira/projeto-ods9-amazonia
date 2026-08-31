@@ -54,11 +54,14 @@ Será desenvolvida em uma etapa posterior do projeto.
 
  Integrante Responsabilidade Frente 
 
-Diego A. Oliveira (Líder) Kanban/Issues, Organização da Equipe  GitHub/Gestão 
+ Diego A. Oliveira (Líder) Kanban/Issues, Organização da Equipe  GitHub/Gestão 
+ 
  Nome 2  Problema Real  Visão
  
- Kauê Serrão Vatan  Solução com IA  Visão
+ Solução com IA  Visão
+ Kauê Serrão Vatan
  926113835
+ 
  Nome 4  Público-Alvo / ODS  Visão 
  
  Nome 5  Entidades principais  POO 
