@@ -58,7 +58,7 @@ Será desenvolvida em uma etapa posterior do projeto.
  
  Nome 2  Problema Real  Visão
  
- Kauê Serrão Vatan RA: 926113835 - Solução com IA  Visão
+ Solução com IA  Visão
  
  Nome 4  Público-Alvo / ODS  Visão 
  
