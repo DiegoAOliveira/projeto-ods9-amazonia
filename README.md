@@ -58,7 +58,7 @@ Será desenvolvida em uma etapa posterior do projeto.
  
  Nome 2  Problema Real  Visão
  
- Solução com IA  Visão
+ Solução com IA  Visão -
  Kauê Serrão Vatan
  926113835
  
