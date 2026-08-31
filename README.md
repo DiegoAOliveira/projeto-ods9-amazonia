@@ -3,24 +3,24 @@ Amazônia Inteligente
 
 Plataforma Inteligente de Monitoramento de Infraestrutura e Serviços Essenciais em Comunidades Isoladas da Amazônia
 
-2. ODS Escolhido
+# 2. ODS Escolhido
 ODS 9 — Indústria, Inovação e Infraestrutura
 
 Conteúdo será desenvolvido pela equipe.
 
-3. Problema Real
+# 3. Problema Real
 
 Conteúdo será desenvolvido pela equipe.
 
-4. Solução com Inteligência Artificial
+# 4. Solução com Inteligência Artificial
 
 Conteúdo será desenvolvido pela equipe.
 
-5. Público-Alvo
+# 5. Público-Alvo
 
 Conteúdo será desenvolvido pela equipe.
 
-6. Áreas Monitoradas
+# 6. Áreas Monitoradas
 
 🛜 Conectividade
 
@@ -34,7 +34,7 @@ Conteúdo será desenvolvido pela equipe.
 
 🌱 Meio Ambiente
 
-7. Modelagem Inicial — POO
+# 7. Modelagem Inicial — POO
 
 Conteúdo será desenvolvido pela equipe.
 
@@ -42,17 +42,17 @@ Diagrama de Classes
 
 ...
 
-8. Tecnologias
+# 8. Tecnologias
 
 As tecnologias serão definidas pela equipe.
 
-9. Arquitetura do Sistema
+# 9. Arquitetura do Sistema
 
 Será desenvolvida em uma etapa posterior do projeto.
 
-10. Organização da Equipe
+# 10. Organização da Equipe
 
-# Integrante Responsabilidade Frente 
+ Integrante Responsabilidade Frente 
 
 Diego A. Oliveira (Líder) Kanban/Issues, Organização da Equipe  GitHub/Gestão 
  Nome 2  Problema Real  Visão
