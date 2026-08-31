@@ -55,14 +55,22 @@ Será desenvolvida em uma etapa posterior do projeto.
 # Integrante Responsabilidade Frente 
 
 Diego A. Oliveira (Líder) Kanban/Issues, Organização da Equipe  GitHub/Gestão 
- Nome 2  Problema Real  Visão 
- Nome 3  Solução com IA  Visão 
+ Nome 2  Problema Real  Visão
+ 
+ Nome 3  Solução com IA  Visão
+ 
  Nome 4  Público-Alvo / ODS  Visão 
+ 
  Nome 5  Entidades principais  POO 
+ 
  Nome 6  Atributos/métodos (parte 1)  POO 
+ 
  Nome 7  Atributos/métodos (parte 2) + relações  POO 
+ 
  Nome 8  Diagrama de Classes  POO 
+ 
  Nome 9  Tecnologias  GitHub/Gestão 
+ 
  Nome 10  — (reserva/ajuda geral)
 
 11. Gestão do Projeto
