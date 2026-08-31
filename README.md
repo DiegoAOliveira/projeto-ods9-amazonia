@@ -57,7 +57,7 @@ Será desenvolvida em uma etapa posterior do projeto.
 Diego A. Oliveira (Líder) Kanban/Issues, Organização da Equipe  GitHub/Gestão 
  Nome 2  Problema Real  Visão
  
- Nome 3  Solução com IA  Visão
+ Kauê Serrão  Solução com IA  Visão
  
  Nome 4  Público-Alvo / ODS  Visão 
  
