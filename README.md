@@ -38,7 +38,7 @@ Conteúdo será desenvolvido pela equipe.
 
 Conteúdo será desenvolvido pela equipe.
 
-Diagrama de Classes
+# 7.1 Diagrama de Classes
 
 ...
 
