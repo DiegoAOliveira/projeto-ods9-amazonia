@@ -54,13 +54,11 @@ Será desenvolvida em uma etapa posterior do projeto.
 
  Integrante Responsabilidade Frente 
 
- Diego A. Oliveira (Líder) Kanban/Issues, Organização da Equipe  GitHub/Gestão 
+ Diego A. Oliveira RA: 926118900 - Kanban/Issues, Organização da Equipe  GitHub/Gestão 
  
  Nome 2  Problema Real  Visão
  
- Solução com IA  Visão -
- Kauê Serrão Vatan
- 926113835
+ Kauê Serrão Vatan RA: 926113835 - Solução com IA  Visão
  
  Nome 4  Público-Alvo / ODS  Visão 
  
