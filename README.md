@@ -1,4 +1,4 @@
-# projeto-ods9-amazonia
+# Projeto-ods9-amazonia
 Amazônia Inteligente
 
 Plataforma Inteligente de Monitoramento de Infraestrutura e Serviços Essenciais em Comunidades Isoladas da Amazônia
