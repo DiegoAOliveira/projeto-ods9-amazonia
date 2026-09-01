@@ -37,17 +37,17 @@ Conteúdo será desenvolvido pela equipe.
 
 # 6. Áreas Monitoradas
 
-🛜 Conectividade
+## 🛜 Conectividade
 
-⚡ Energia
+##⚡ Energia
 
-🚰 Saneamento
+## 🚰 Saneamento
 
-🚑 Saúde 
+## 🚑 Saúde 
 
-🎓 Educação
+## 🎓 Educação
 
-🌱 Meio Ambiente
+## 🌱 Meio Ambiente
 
 # 7. Modelagem Inicial — POO
 
@@ -132,7 +132,7 @@ Desafio: falta de energia para carregar os dispositivos que rodam o app.
 
 Solução: otimização do app para baixo consumo de bateria, reduzindo notificações constantes e priorizando sincronização em lote.
 
-# Sustentabilidade Financeira
+## Sustentabilidade Financeira
 
 Desafio: custo de manter servidor, manutenção e atualizações após o encerramento do projeto acadêmico.
 
@@ -142,7 +142,7 @@ Desafio: custo de uso contínuo de APIs de IA pagas.
 
 Solução: priorização de modelos de IA open-source e gratuitos, reservando serviços pagos apenas para funcionalidades essenciais.
 
-# Adoção e Capacitação Local
+## Adoção e Capacitação Local
 
 Desafio: baixa familiaridade da população com aplicativos digitais.
 
@@ -152,19 +152,19 @@ Desafio: ausência de suporte técnico local em caso de falhas.
 
 Solução: documentação simples e visual, com capacitação básica de pontos focais em cada comunidade.
 
-# Institucional e Político
+## Institucional e Político
 
 Desafio: dependência de continuidade por parte de gestões públicas.
 
 Solução: manutenção do projeto como open-source, documentado publicamente, permitindo que universidades, ONGs ou futuras gestões deem continuidade sem depender de uma única entidade.
 
-# Qualidade e Confiabilidade dos Dados
+## Qualidade e Confiabilidade dos Dados
 
 Desafio: imprecisão em dados simulados ou reportados manualmente, e possível desengajamento dos moradores ao longo do tempo.
 
 Solução: simplificação máxima do processo de reporte (poucos toques) e uso de regras transparentes antes de evoluir para modelos de IA mais complexos.
 
-# Ambiental e Geográfico
+## Ambiental e Geográfico
 
 Desafio: eventos climáticos extremos podem isolar ainda mais a comunidade justamente quando o sistema seria mais necessário.
 
