@@ -6,7 +6,9 @@ Plataforma Inteligente de Monitoramento de Infraestrutura e Serviços Essenciais
 # 2. ODS Escolhido
 ODS 9 — Indústria, Inovação e Infraestrutura
 
-Conteúdo será desenvolvido pela equipe.
+O Amazônia Inteligente está diretamente relacionado ao ODS 9, que busca promover infraestrutura resiliente, inovação e desenvolvimento sustentável. O projeto utiliza tecnologia e Inteligência Artificial para monitorar seis áreas essenciais — conectividade, energia, saneamento, saúde, educação e meio ambiente, permitindo identificar padrões, antecipar possíveis problemas e gerar alertas para quem pode agir.
+
+Em comunidades isoladas da Amazônia, onde informações sobre problemas de infraestrutura muitas vezes chegam tarde, a plataforma funciona como uma ferramenta de infraestrutura social, conectando dados, comunidades e responsáveis para tornar a resposta aos problemas mais rápida e eficiente.
 
 # 3. Problema Real
 
@@ -24,8 +26,23 @@ No fim, a função principal da IA é identificar problema rápido e de forma au
 
 # 5. Público-Alvo
 
-Conteúdo será desenvolvido pela equipe.
+1. ### Morador da comunidade:
+   
+    utiliza o app para acompanhar o que está acontecendo na própria região e sinalizar problemas do dia a dia, como falta de água, energia ou conectividade.
 
+3. ### Agente local:
+
+    como agentes de saúde ou agentes comunitários, utiliza o app para registrar informações coletadas em campo, atualizar a situação da comunidade e acompanhar possíveis problemas.
+
+5. ### Gestor público:
+
+   acompanha indicadores das comunidades, recebe alertas sobre situações críticas e utiliza os dados para identificar prioridades e direcionar ações e recursos.
+
+7. ### Equipes de manutenção:
+
+   recebem ocorrências e podem acompanhar quais problemas precisam de atendimento e em quais locais.
+
+ 
 # 6. Áreas Monitoradas
 
 ### 🛜 Conectividade
