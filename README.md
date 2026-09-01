@@ -122,7 +122,7 @@ As entregas quinzenais são acompanhadas movendo os cartões entre as colunas co
 
 Por se tratar de uma solução voltada a comunidades isoladas e com baixo orçamento disponível, o projeto considera desde já os principais desafios que podem surgir ao longo do desenvolvimento e operação, junto com soluções viáveis e de baixo custo para cada um.
 
-# Infraestrutura e Conectividade
+## Infraestrutura e Conectividade
 
 Desafio: conexão intermitente ou inexistente na maior parte do tempo.
 
