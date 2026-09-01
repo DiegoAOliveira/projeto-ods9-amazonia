@@ -39,7 +39,7 @@ Conteúdo será desenvolvido pela equipe.
 
 ## 🛜 Conectividade
 
-##⚡ Energia
+## ⚡ Energia
 
 ## 🚰 Saneamento
 
