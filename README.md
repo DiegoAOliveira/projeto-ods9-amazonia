@@ -4,7 +4,8 @@ Amazônia Inteligente
 Plataforma Inteligente de Monitoramento de Infraestrutura e Serviços Essenciais em Comunidades Isoladas da Amazônia
 
 # 2. ODS Escolhido
-ODS 9 — Indústria, Inovação e Infraestrutura
+
+### ODS 9 — Indústria, Inovação e Infraestrutura
 
 O Amazônia Inteligente está diretamente relacionado ao ODS 9, que busca promover infraestrutura resiliente, inovação e desenvolvimento sustentável. O projeto utiliza tecnologia e Inteligência Artificial para monitorar seis áreas essenciais — conectividade, energia, saneamento, saúde, educação e meio ambiente, permitindo identificar padrões, antecipar possíveis problemas e gerar alertas para quem pode agir.
 
