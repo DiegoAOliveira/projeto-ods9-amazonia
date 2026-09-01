@@ -28,7 +28,7 @@ Conteúdo será desenvolvido pela equipe.
 
 🚰 Saneamento
 
-🚤 Logística
+🚑 Saúde 
 
 🎓 Educação
 
