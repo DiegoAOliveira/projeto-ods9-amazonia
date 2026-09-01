@@ -74,7 +74,7 @@ Será desenvolvida em uma etapa posterior do projeto.
  
  Nome 10  — (reserva/ajuda geral)
 
-11. Gestão do Projeto
+# 11. Gestão do Projeto
 
 O projeto será gerenciado utilizando GitHub Projects (Kanban) e Issues
 
