@@ -28,7 +28,7 @@ Por exemplo, caso os dados indiquem uma situação crítica no fornecimento de e
 
 Da mesma forma, caso seja identificado um aumento anormal de ocorrências relacionadas à saúde, o sistema poderá emitir:
 
- 🚑 **Alerta de Saúde:aumento de ocorrências registrado na comunidade. Recomenda-se acompanhamento da situação pelos responsáveis locais.
+ 🚑 Alerta de Saúde:aumento de ocorrências registrado na comunidade. Recomenda-se acompanhamento da situação pelos responsáveis locais.
 
 Dessa forma, a IA ajuda a identificar problemas de forma rápida e automática, permitindo que os responsáveis pela comunidade tenham conhecimento de situações que precisam de atenção sem precisar analisar manualmente todos os dados coletados.
 # 5. Público-Alvo
