@@ -87,7 +87,7 @@ Cada tarefa do projeto corresponde a uma Issue no GitHub, atribuída a um respon
 As entregas quinzenais são acompanhadas movendo os cartões entre as colunas conforme o progresso.
 
 
-#12. Desafios e Sustentabilidade
+# 12. Desafios e Sustentabilidade
 
 Por se tratar de uma solução voltada a comunidades isoladas e com baixo orçamento disponível, o projeto considera desde já os principais desafios que podem surgir ao longo do desenvolvimento e operação, junto com soluções viáveis e de baixo custo para cada um.
 
