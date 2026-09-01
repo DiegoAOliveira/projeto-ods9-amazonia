@@ -44,7 +44,23 @@ Conteúdo será desenvolvido pela equipe.
 
 # 8. Tecnologias
 
-As tecnologias serão definidas pela equipe.
+1️⃣ Front-end (Aplicativo Móvel):
+Flutter + Dart
+
+2️⃣ Back-end / API:
+Python + FastAPI
+
+3️⃣ Banco de Dados:
+Firebase Firestore
+
+4️⃣ Inteligência Artificial:
+Python + bibliotecas de Machine Learning
+
+5️⃣ Coleta de Dados (Sensores):
+Os dados de sensores (energia, água, conectividade etc.)
+
+6️⃣ Gestão do Projeto:
+GitHub (repositório, Issues e Projects/Kanban)
 
 # 9. Arquitetura do Sistema
 
