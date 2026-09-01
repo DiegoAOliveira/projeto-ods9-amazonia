@@ -28,17 +28,17 @@ Conteúdo será desenvolvido pela equipe.
 
 # 6. Áreas Monitoradas
 
-## 🛜 Conectividade
+### 🛜 Conectividade
 
-## ⚡ Energia
+### ⚡ Energia
 
-## 🚰 Saneamento
+### 🚰 Saneamento
 
-## 🚑 Saúde 
+### 🚑 Saúde 
 
-## 🎓 Educação
+### 🎓 Educação
 
-## 🌱 Meio Ambiente
+### 🌱 Meio Ambiente
 
 # 7. Modelagem Inicial — POO
 
