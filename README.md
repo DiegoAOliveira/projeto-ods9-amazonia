@@ -13,13 +13,15 @@ Conteúdo será desenvolvido pela equipe.
 Conteúdo será desenvolvido pela equipe.
 
 # 4. Solução com Inteligência Artificial
-Como a Inteligência Artificial será utilizada:
+
+## Como a Inteligência Artificial será utilizada:
 
  A Inteligência Artificial vai ser usada no Amazônia Inteligente pra analisar os dados coletados nas comunidades isoladas da região. A ideia é treinar nosso próprio modelo de Machine Learning, usando dados simulados baseados na realidade de Santa Rosa do Purus (AC), em vez de depender de alguma IA pronta de terceiro.
 
 Ela vai acompanhar informações de energia, internet, saneamento, saúde, educação e meio ambiente, e a partir desses dados consegue identificar quando algo sai do normal, gerando um alerta automaticamente. Por exemplo: se uma comunidade tiver problema no fornecimento de energia, o sistema gera um alerta avisando que o nível está abaixo do recomendado. Ou, na área da saúde, se a IA perceber um aumento fora do padrão nos casos registrados, ela pode gerar um alerta indicando que aquilo precisa de acompanhamento.
 
 No fim, a função principal da IA é identificar problema rápido e de forma automática, avisando os responsáveis e facilitando a tomada de decisão — sem precisar que alguém fique analisando todos os dados manualmente.
+
 # 5. Público-Alvo
 
 Conteúdo será desenvolvido pela equipe.
