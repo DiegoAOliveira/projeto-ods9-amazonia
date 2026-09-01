@@ -50,22 +50,28 @@ Conteúdo será desenvolvido pela equipe.
 
 # 8. Tecnologias
 
-1️⃣ Front-end (Aplicativo Móvel):
+### 1️⃣ Front-end (Aplicativo Móvel):
+
 Flutter + Dart - será utilizado para desenvolver o aplicativo móvel, permitindo que a mesma base de código seja utilizada para Android e iOS. O aplicativo apresentará aos moradores informações sobre conectividade, energia, saneamento, logística, educação e meio ambiente, além de exibir os níveis de situação Normal, Atenção e Crítico e receber notificações de alertas.
 
-2️⃣ Back-end / API:
+### 2️⃣ Back-end / API:
+
 Python + FastAPI - será utilizado para desenvolver a API responsável pela comunicação entre o aplicativo, o banco de dados, a Inteligência Artificial e os dados de monitoramento. A API receberá os dados dos diferentes segmentos, processará as informações necessárias e disponibilizará os resultados para o aplicativo.
 
-3️⃣ Banco de Dados:
+### 3️⃣ Banco de Dados:
+
 Firebase Firestore - será utilizado para armazenar as informações do sistema, como dados das comunidades, usuários, registros de monitoramento, ocorrências e alertas. O banco permitirá que as informações sejam consultadas e atualizadas pelo sistema de forma integrada ao aplicativo.
 
-4️⃣ Inteligência Artificial:
+### 4️⃣ Inteligência Artificial:
+
 Python + Scikit-learn + Pandas — modelo próprio de Machine Learning, treinado com dados simulados baseados na realidade de Santa Rosa do Purus (AC)
 
-5️⃣ Coleta de Dados (Sensores):
+### 5️⃣ Coleta de Dados (Sensores):
+
 Os dados de sensores (energia, água, conectividade etc.) serão simulados, tendo como referência a realidade de Santa Rosa do Purus (AC), sem necessidade de hardware físico nesta etapa do projeto
 
-6️⃣ Gestão do Projeto:
+### 6️⃣ Gestão do Projeto:
+
 GitHub (repositório, Issues e Projects/Kanban) - utilizado para armazenar o código e organizar tarefas através de Issues e Kanban.
 
 # 9. Arquitetura do Sistema
