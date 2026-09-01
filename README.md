@@ -13,24 +13,17 @@ Conteúdo será desenvolvido pela equipe.
 Conteúdo será desenvolvido pela equipe.
 
 # 4. Solução com Inteligência Artificial
+Como a Inteligência Artificial será utilizada:
 
-A Inteligência Artificial será utilizada no aplicativo **Amazônia Inteligente** para analisar automaticamente os dados coletados sobre as condições das comunidades isoladas da Amazônia e identificar situações que necessitam de atenção.
+ A Inteligência Artificial será utilizada no aplicativo Amazônia Inteligente para analisar os dados coletados nas comunidades isoladas da Amazônia.
 
- 🚨 Geração automática de alertas
+A IA vai acompanhar informações relacionadas à energia, internet, saneamento, saúde, educação e meio ambiente. A partir desses dados, ela poderá identificar quando alguma situação estiver fora do normal e gerar automaticamente um alerta.
 
-O sistema irá analisar dados das áreas monitoradas, como energia, conectividade, saneamento, saúde, educação e meio ambiente.
+Por exemplo, se uma comunidade estiver com problemas no fornecimento de energia, o sistema poderá gerar um alerta de energia, avisando que o nível está abaixo do recomendado.
 
-A IA poderá identificar valores fora dos padrões esperados e, quando detectar uma situação de risco, gerar automaticamente um alerta no aplicativo.
+Outro exemplo seria na área da saúde. Se a IA perceber um aumento fora do normal nos casos registrados em uma comunidade, ela poderá gerar um **alerta de saúde**, indicando que aquela situação precisa ser acompanhada.
 
-Por exemplo, caso os dados indiquem uma situação crítica no fornecimento de energia, o sistema poderá gerar:
-
- ⚠️ Alerta de Energia: nível de energia abaixo do limite recomendado. É necessário verificar o sistema de fornecimento.
-
-Da mesma forma, caso seja identificado um aumento anormal de ocorrências relacionadas à saúde, o sistema poderá emitir:
-
- 🚑 Alerta de Saúde:aumento de ocorrências registrado na comunidade. Recomenda-se acompanhamento da situação pelos responsáveis locais.
-
-Dessa forma, a IA ajuda a identificar problemas de forma rápida e automática, permitindo que os responsáveis pela comunidade tenham conhecimento de situações que precisam de atenção sem precisar analisar manualmente todos os dados coletados.
+Então, na nossa visão, a principal função da IA será **identificar problemas de forma rápida e automática e avisar os responsáveis**, facilitando a tomada de decisões e evitando que todos os dados precisem ser analisados manualmente.
 # 5. Público-Alvo
 
 Conteúdo será desenvolvido pela equipe.
