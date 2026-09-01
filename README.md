@@ -63,7 +63,7 @@ Firebase Firestore - será utilizado para armazenar as informações do sistema,
 Python + Scikit-learn + Pandas — modelo próprio de Machine Learning, treinado com dados simulados baseados na realidade de Santa Rosa do Purus (AC)
 
 5️⃣ Coleta de Dados (Sensores):
-Os dados de sensores (energia, água, conectividade etc.) os dados de sensores (energia, água, conectividade etc.) serão simulados, tendo como referência a realidade de Santa Rosa do Purus (AC), sem necessidade de hardware físico nesta etapa do projeto
+Os dados de sensores (energia, água, conectividade etc.) serão simulados, tendo como referência a realidade de Santa Rosa do Purus (AC), sem necessidade de hardware físico nesta etapa do projeto
 
 6️⃣ Gestão do Projeto:
 GitHub (repositório, Issues e Projects/Kanban) - utilizado para armazenar o código e organizar tarefas através de Issues e Kanban.
