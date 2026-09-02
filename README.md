@@ -68,19 +68,15 @@ No fim, a função principal da IA é identificar problema rápido e de forma au
 
 ### Usuário: Pessoa que utiliza o aplicativo.
 
-**Atributos:**  `id`,`nome`,`email`,`senha`,`papel` 
+**Atributos:**  `id`, `nome`, `email`, `senha`, `papel` (morador, agente de saúde ou gestor)
 
-(morador, agente de saúde ou gestor)
-
-**Métodos:**  `login`,`logout`,`atualizarPerfil`
+**Métodos:**  `login`, `logout`, `atualizarPerfil`
 
 **Resumo:**
 
 O Usuário armazena seus dados e seu papel no sistema. Pode fazer login, sair do sistema e atualizar seu perfil.
 
 **Exemplo:**
-
-Usuario 
 
   **nome:** `João Silva`
   
@@ -90,44 +86,26 @@ Usuario
 
 ### Comunidade: Região monitorada pelo sistema.
 
-Atributos:
-- Nome: `Santa Rosa do Purus`
-- Localizacao: `Acre`
-- PopulacaoEstimada: `7143`
+Atributos: `id`,`Nome`,`Localizacao`,`PopulacaoEstimada` 
 
-Métodos:
-- "cadastrarComunidade"
-- "listarAreasMonitoradas"
+Métodos:`cadastrarComunidade`,`listarAreasMonitoradas`
 
-Resumo:
+**Resumo:**
 A Comunidade armazena informações sobre o local, sua população e as áreas que estão sendo monitoradas.
+
+**Exemplo:**
+
+:Nome: `Santa Rosado Purus`
+:Localizacao: `Acre,fronteira com o Peru`
+:PopulacaoEstimada: `7143`
 
 ### Área Monitorada: representa uma das 6 frentes de acompanhamento "(Conectividade, Energia, Saneamento, Saúde, Educação, Meio Ambiente)"
 
-Atributos:
+Atributos: `id`, `Tipo`, `StatusAtual`, `Comunidade`
 
-Tipo: `Saneamento`
-StatusAtual: `Crítico` 
-Comunidade: `Santa Rosa do Purus`
+Métodos: `atualizarStatus`, `gerarHistorico`
 
-Tipos:
-
-- Conectividade
-- Energia
-- Saneamento
-- Saúde
-- Educação
-- Meio Ambiente
-
-Métodos:
-
-- "atualizarStatus"
-- "gerarHistorico"
-
-  
-### Sensor: Fonte de dados sobre faltade energia, conectividade, saneamento ou meio ambiente.
-
-## Sensor
+### Sensor
 
 **Atributos:** `id`, `tipo`, `localização`, `valorMedido`, `unidade`, `dataHora`, `status` (ativo/inativo)
 
