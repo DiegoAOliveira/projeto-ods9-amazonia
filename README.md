@@ -283,8 +283,11 @@ Será desenvolvida em uma etapa posterior do projeto.
 O projeto será gerenciado utilizando GitHub Projects (Kanban) e Issues
 
 *Fazer : tarefas planejadas, ainda não iniciadas*
+
 *Em Progreso : em desenvolvimento*
+
 *Análise : aguardando revisão de outro membro antes de mesclar*
+
 *Feito : concluído e mesclado na main*
 
 Cada tarefa do projeto corresponde a uma Issue no GitHub, atribuída a um responsável. 
