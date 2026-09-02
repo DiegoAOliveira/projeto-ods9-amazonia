@@ -129,13 +129,11 @@ O Sensor é responsável por coletar informações das áreas monitoradas, como 
 
 **Exemplo real:**
 
-Sensor {
     tipo: "Qualidade da água",
     localização: "Santa Rosa do Purus",
     valorMedido: 38,9,
     unidade: "%",
     status: "ativo"
-}
 
 ### Alerta: Aviso sobre situações classificadas como normal, atenção ou crítico.
 
@@ -147,13 +145,11 @@ Sensor {
 O Alerta é gerado quando o sistema identifica uma situação que precisa de atenção. Ele pode ser criado a partir dos dados coletados pelos sensores ou de padrões identificados pela Inteligência Artificial. O alerta informa o tipo e a gravidade do problema, além de permitir que os responsáveis sejam notificados.
 
 **Exemplo real:**
-
-Alerta {
+    
     tipo: "Baixa cobertura de água tratada",
     gravidade: "Alta",
     dataHora: "01/09/2026",
     status: "aberto"
-}
 
 Esse alerta pode ser relacionado ao dado de que apenas **38,9% da população de Santa Rosa do Purus tem acesso à água tratada**.
 
@@ -170,12 +166,10 @@ O Relatório reúne e organiza os dados coletados pelo sistema durante determina
 
 **Exemplo real:**
 
-Relatório {
     titulo: "Monitoramento de Saneamento",
     periodo: "2026",
     indicador: "38,9% da população com acesso à água tratada",
     dataGeracao: "01/09/2026"
-}
 
 ### ModeloPreditivo: Modelo de IA que analisa os dados e prevê situações críticas antes que aconteçam.
 
