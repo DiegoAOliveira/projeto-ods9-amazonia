@@ -88,7 +88,7 @@ Usuario
   
   **papel:** `Agente de Saúde`
 
-Comunidade: Região monitorada pelo sistema.
+### Comunidade: Região monitorada pelo sistema.
 
 Atributos:
 - Nome: `Santa Rosa do Purus`
@@ -102,7 +102,7 @@ Métodos:
 Resumo:
 A Comunidade armazena informações sobre o local, sua população e as áreas que estão sendo monitoradas.
 
-Área Monitorada: representa uma das 6 frentes de acompanhamento "(Conectividade, Energia, Saneamento, Saúde, Educação, Meio Ambiente)"
+### Área Monitorada: representa uma das 6 frentes de acompanhamento "(Conectividade, Energia, Saneamento, Saúde, Educação, Meio Ambiente)"
 
 Atributos:
 
@@ -125,7 +125,7 @@ Métodos:
 - "gerarHistorico"
 
   
-Sensor: Fonte de dados sobre faltade energia, conectividade, saneamento ou meio ambiente.
+### Sensor: Fonte de dados sobre faltade energia, conectividade, saneamento ou meio ambiente.
 
 ## Sensor
 
@@ -148,7 +148,7 @@ Sensor {
 
 Alerta: Aviso sobre uma situações classificadas como normal, atenção e critico
 
-## Alerta
+### Alerta
 
 **Atributos:** `id`, `tipo`, `gravidade`, `dataHora`, `status` (aberto/resolvido)
 
@@ -170,7 +170,7 @@ Esse alerta pode ser relacionado ao dado de que apenas **38,9% da população de
 
 Relatório: Registro das condições e ocorrências identificadas pelo sistema.
 
-## Relatório
+### Relatório
 
 **Atributos:** `id`, `titulo`, `periodo`, `dados`, `indicadores`, `dataGeracao`
 
