@@ -95,11 +95,11 @@ A Comunidade armazena informações sobre o local, sua população e as áreas q
 
 **Exemplo:**
 
-:Nome: `Santa Rosado Purus`
+**:Nome:** `Santa Rosado Purus`
 
-:Localizacao: `Acre,fronteira com o Peru`
+**:Localizacao:** `Acre,fronteira com o Peru`
 
-:PopulacaoEstimada: `7143`
+**:PopulacaoEstimada:** `7143`
 
 ### Área Monitorada: representa uma das 6 frentes de acompanhamento "(Conectividade, Energia, Saneamento, Saúde, Educação, Meio Ambiente)"
 
