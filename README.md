@@ -91,9 +91,9 @@ Usuario
 Comunidade: Região monitorada pelo sistema.
 
 Atributos:
-- Nome: Santa Rosa do Purus
-- Localizacao: Acre
-- PopulacaoEstimada: 7143
+- Nome: `Santa Rosa do Purus`
+- Localizacao: `Acre`
+- PopulacaoEstimada: `7143`
 
 Métodos:
 - "cadastrarComunidade"
@@ -106,9 +106,9 @@ A Comunidade armazena informações sobre o local, sua população e as áreas q
 
 Atributos:
 ID: 
-Tipo: Saneamento
-StatusAtual: Crítico
-Comunidade: Santa Rosa do Purus
+Tipo: `Saneamento`
+StatusAtual: `Crítico` 
+Comunidade: `Santa Rosa do Purus`
 
 Tipos:
 
