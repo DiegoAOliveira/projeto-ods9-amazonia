@@ -274,7 +274,7 @@ Será desenvolvida em uma etapa posterior do projeto.
  Vinicius Santim de Jesus RA: 926104177 Usuário: @odsInfra
  
  
- ### *Definir Stack do Projeto*
+ ### *Tecnologias do Projeto*
  
  Ygor Pliger de França RA: 926107940 Usuário: @ygorpliger
  
