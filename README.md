@@ -66,7 +66,22 @@ No fim, a função principal da IA é identificar problema rápido e de forma au
 
 # 7. Modelagem Inicial — POO
 
-Conteúdo será desenvolvido pela equipe.
+Usuário: Pessoa que utiliza o aplicativo.
+
+
+Comunidade: Região monitorada pelo sistema.
+
+
+Área Monitorada: representa uma das 6 frentes de acompanhamento "(Conectividade, Energia, Saneamento, Saúde, Educação, Meio Ambiente)"
+
+
+Sensor: Fonte de dados sobre faltade energia, conectividade, saneamento ou meio ambiente.
+
+
+Alerta: Aviso sobre uma situações classificadas como normal, atenção e critico
+
+
+Relatório: Registro das condições e ocorrências identificadas pelo sistema.
 
 # 7.1 Diagrama de Classes
 
