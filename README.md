@@ -95,17 +95,26 @@ A Comunidade armazena informações sobre o local, sua população e as áreas q
 
 **Exemplo:**
 
-**:Nome:** `Santa Rosado Purus`
+**Nome:** `Santa Rosado Purus`
 
-**:Localizacao:** `Acre,fronteira com o Peru`
+**Localizacao:** `Acre,fronteira com o Peru`
 
-**:PopulacaoEstimada:** `7143`
+**PopulacaoEstimada:** `7143`
 
 ### Área Monitorada: representa uma das 6 frentes de acompanhamento "(Conectividade, Energia, Saneamento, Saúde, Educação, Meio Ambiente)"
 
 Atributos: `id`, `Tipo`, `StatusAtual`, `Comunidade`
 
 Métodos: `atualizarStatus`, `gerarHistorico`
+
+**Em resumo:** 
+a AreaMonitorada guarda o tipo de área, seu status atual e a qual comunidade pertence, e consegue atualizar seu status e gerar um histórico.
+
+**Exemplo real:**
+
+Tipo: `Saneamento`
+StatusAtual: `Crítico` 
+Comunidade: `Santa Rosa do Purus`
 
 ### Sensor
 
