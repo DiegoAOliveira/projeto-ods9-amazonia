@@ -127,9 +127,7 @@ Métodos:
   
 Sensor: Fonte de dados sobre faltade energia, conectividade, saneamento ou meio ambiente.
 
-# Classes: Sensor, Alerta e Relatório 
-
-## Classe: Sensor
+## Sensor
 
 **Atributos:** `id`, `tipo`, `localização`, `valorMedido`, `unidade`, `dataHora`, `status` (ativo/inativo)
 
@@ -150,7 +148,7 @@ Sensor {
 
 Alerta: Aviso sobre uma situações classificadas como normal, atenção e critico
 
-## Classe: Alerta
+## Alerta
 
 **Atributos:** `id`, `tipo`, `gravidade`, `dataHora`, `status` (aberto/resolvido)
 
@@ -172,7 +170,7 @@ Esse alerta pode ser relacionado ao dado de que apenas **38,9% da população de
 
 Relatório: Registro das condições e ocorrências identificadas pelo sistema.
 
-## Classe: Relatório
+## Relatório
 
 **Atributos:** `id`, `titulo`, `periodo`, `dados`, `indicadores`, `dataGeracao`
 
