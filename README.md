@@ -13,7 +13,13 @@ Em comunidades isoladas da Amazônia, onde informações sobre problemas de infr
 
 # 3. Problema Real
 
-Conteúdo será desenvolvido pela equipe.
+As comunidades isoladas da Amazônia enfrentam dificuldades para ter acesso regular a serviços essenciais, como energia elétrica, internet, água potável, saneamento e transporte. Essas dificuldades estão relacionadas principalmente às grandes distâncias, à dispersão das comunidades e às características geográficas da região, que tornam a instalação e a manutenção de infraestrutura mais complexas.
+
+Esse problema ainda afeta uma quantidade significativa de pessoas. Segundo a Empresa de Pesquisa Energética (EPE), o planejamento de 2025 para os Sistemas Isolados considera o atendimento de quase 2 milhões de pessoas distribuídas em 160 localidades isoladas, demonstrando a dimensão do desafio de garantir um fornecimento adequado de energia nessas regiões.
+A dificuldade também aparece no acesso ao saneamento. Dados do IBGE mostram que, entre moradores de Territórios Quilombolas localizados na Amazônia Legal, 96,9% convivem com algum tipo de precariedade relacionada ao abastecimento de água, ao esgotamento sanitário ou à coleta de lixo.
+
+Além disso, estudos sobre comunidades ribeirinhas mostram que o isolamento geográfico interfere diretamente no acesso a serviços. Em determinadas comunidades, moradores podem precisar realizar deslocamentos de muitas horas para chegar aos centros urbanos, enquanto o acesso à internet também pode ser limitado ou instável.
+Dessa forma, o problema não é apenas a falta de infraestrutura, mas também a dificuldade de acompanhar a situação dessas comunidades e identificar rapidamente quais áreas precisam de atenção.
 
 # 4. Solução com Inteligência Artificial
 
