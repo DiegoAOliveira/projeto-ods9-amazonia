@@ -182,15 +182,17 @@ o ModeloPreditivo guarda a versão e a acurácia do modelo de IA treinado, e con
 ### Relações entre as 7 classes
 
  `Comunidade` **tem várias** `AreaMonitorada`
+ 
  `AreaMonitorada` **tem vários** `Sensor`
+ 
  `Sensor` **pode gerar** `Alerta`
+ 
  `Usuário` **recebe** `Alerta` e **visualiza** `Relatório`
+ 
  `ModeloPreditivo` **analisa** `AreaMonitorada`
+ 
  `ModeloPreditivo` **pode gerar** `Alerta`
-
-
-
-
+ 
 # 7.1 Diagrama de Classes
 
 ...
