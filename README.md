@@ -171,6 +171,26 @@ O Relatório reúne e organiza os dados coletados pelo sistema durante determina
 
 ### ModeloPreditivo: Modelo de IA que analisa os dados e prevê situações críticas antes que aconteçam.
 
+**Atributos:** `id`, `versao`, `acuracia`, `dataTreinamento`
+
+**Métodos:** `treinar()`, `preverStatus()`
+
+**Em resumo:**
+
+o ModeloPreditivo guarda a versão e a acurácia do modelo de IA treinado, e consegue treinar com novos dados e prever o status futuro de uma área monitorada.
+
+### Relações entre as 7 classes
+
+    `Comunidade` **tem várias** `AreaMonitorada`
+    `AreaMonitorada` **tem vários** `Sensor`
+    `Sensor` **pode gerar** `Alerta`
+    `Usuário` **recebe** `Alerta` e **visualiza** `Relatório`
+    `ModeloPreditivo` **analisa** `AreaMonitorada`
+    `ModeloPreditivo` **pode gerar** `Alerta`
+
+
+
+
 # 7.1 Diagrama de Classes
 
 ...
