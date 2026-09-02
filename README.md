@@ -127,6 +127,26 @@ Métodos:
   
 Sensor: Fonte de dados sobre faltade energia, conectividade, saneamento ou meio ambiente.
 
+# Classes: Sensor, Alerta, Relatório e Modelo Preditivo
+
+## Classe: Sensor
+
+**Atributos:** `id`, `tipo`, `localização`, `valorMedido`, `unidade`, `dataHora`, `status` (ativo/inativo)
+
+**Métodos:** `coletarDados()`, `medirValor()`, `enviarDados()`, `verificarStatus()`
+
+**Resumo:**  
+O Sensor é responsável por coletar informações das áreas monitoradas, como dados relacionados à energia, saneamento, saúde, conectividade e meio ambiente. Ele armazena o valor medido, sua localização, a data e o status de funcionamento, podendo enviar os dados para o sistema.
+
+**Exemplo real:**
+
+Sensor {
+    tipo: "Qualidade da água",
+    localização: "Santa Rosa do Purus",
+    valorMedido: 38,9,
+    unidade: "%",
+    status: "ativo"
+}
 
 Alerta: Aviso sobre uma situações classificadas como normal, atenção e critico
 
