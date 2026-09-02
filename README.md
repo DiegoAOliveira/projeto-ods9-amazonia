@@ -84,7 +84,6 @@ Alerta: Aviso sobre uma situações classificadas como normal, atenção e criti
 Relatório: Registro das condições e ocorrências identificadas pelo sistema.
 
 
-
 Atributos:
 - "id"
 - "nome"
