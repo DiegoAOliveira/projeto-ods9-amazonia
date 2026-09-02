@@ -229,9 +229,49 @@ Será desenvolvida em uma etapa posterior do projeto.
 
 # 10. Organização da Equipe
 
- Integrante Responsabilidade Frente 
+### *Gestão/Organização*
 
- Diego A. Oliveira RA: 926118900 - Kanban/Issues, Organização da Equipe  GitHub/Gestão 
+ Diego Alves Oliveira RA: 926118900 Usuário: DiegoAOliveira
+ 
+ ### *Relações Entre as Classes/Definir Atributos e Métodos*
+ 
+ Isabelly Ramos RA: 926103609 Usuário: @isabellyramosribeiro3-sudo
+ 
+ ### *Solução Inteligente com IA*
+ 
+ Kauê Serrão Vatan RA: 926113835 Usuário: @kaueserraodev
+
+ 
+ 
+ Luis Felipe Araujo da Rocha RA: 926101627 Usuário: @Filipe10ofc
+
+ 
+ 
+ Nathalia Cristina RA: 926113396 Usuário: @nacristina0602-oss
+ 
+ 
+ 
+ Nicolas Barbosa Lucena RA: 926102015 Usuário: @nicolaslucena897-
+
+ 
+ 
+ Pedro Henrique Silva Ezequiel RA: 926105325 Usuário: @Pzequiel
+ 
+ 
+ 
+ Robson Passos Martins RA: 926112715 Usuário: Robsonmartins-pro
+ 
+ 
+ 
+ Vinicius Santim de Jesus RA: 926104177 Usuário: @odsInfra
+ 
+ 
+ 
+ Ygor Pliger de França RA: 926107940 Usuário: @ygorpliger
+ 
+ 
+ 
+ 
  
  Nome 2  Problema Real  Visão
  
