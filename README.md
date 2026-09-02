@@ -127,7 +127,7 @@ Métodos:
   
 Sensor: Fonte de dados sobre faltade energia, conectividade, saneamento ou meio ambiente.
 
-# Classes: Sensor, Alerta, Relatório e Modelo Preditivo
+# Classes: Sensor, Alerta e Relatório 
 
 ## Classe: Sensor
 
@@ -150,10 +150,47 @@ Sensor {
 
 Alerta: Aviso sobre uma situações classificadas como normal, atenção e critico
 
+## Classe: Alerta
+
+**Atributos:** `id`, `tipo`, `gravidade`, `dataHora`, `status` (aberto/resolvido)
+
+**Métodos:** `gerarAlerta()`, `notificarResponsavel()`, `resolverAlerta()`
+
+**Resumo:**  
+O Alerta é gerado quando o sistema identifica uma situação que precisa de atenção. Ele pode ser criado a partir dos dados coletados pelos sensores ou de padrões identificados pela Inteligência Artificial. O alerta informa o tipo e a gravidade do problema, além de permitir que os responsáveis sejam notificados.
+
+**Exemplo real:**
+
+Alerta {
+    tipo: "Baixa cobertura de água tratada",
+    gravidade: "Alta",
+    dataHora: "01/09/2026",
+    status: "aberto"
+}
+
+Esse alerta pode ser relacionado ao dado de que apenas **38,9% da população de Santa Rosa do Purus tem acesso à água tratada**.
 
 Relatório: Registro das condições e ocorrências identificadas pelo sistema.
 
+## Classe: Relatório
 
+**Atributos:** `id`, `titulo`, `periodo`, `dados`, `indicadores`, `dataGeracao`
+
+**Métodos:** `gerarRelatorio()`, `analisarDados()`, `calcularIndicadores()`, `exportarRelatorio()`
+
+**Resumo:**  
+O Relatório reúne e organiza os dados coletados pelo sistema durante determinado período. Ele permite analisar as informações, calcular indicadores e apresentar os resultados de forma resumida, facilitando a tomada de decisões por usuários, prefeituras, ONGs e outros responsáveis.
+
+**Exemplo real:**
+
+Relatório {
+    titulo: "Monitoramento de Saneamento",
+    periodo: "2026",
+    indicador: "38,9% da população com acesso à água tratada",
+    dataGeracao: "01/09/2026"
+}
+
+---
 
 
 # 7.1 Diagrama de Classes
