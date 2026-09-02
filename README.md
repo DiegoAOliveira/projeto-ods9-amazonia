@@ -74,9 +74,9 @@ Usuário: Pessoa que utiliza o aplicativo.
 - "papel" (morador, agente de saúde ou gestor)
 
    Métodos:
-- "login()"
-- "logout()"
-- "atualizarPerfil()"
+- "login"
+- "logout"
+- "atualizarPerfil"
 
 Resumo:
 O Usuário armazena seus dados e seu papel no sistema. Pode fazer login, sair do sistema e atualizar seu perfil.
@@ -85,7 +85,7 @@ Exemplo:
 
 Usuario 
   nome: "João Silva",
-  email: "joao@email.com",
+  email: "joao@email.com"
   papel: "Agente de Saúde"
 
 Comunidade: Região monitorada pelo sistema.
@@ -97,16 +97,16 @@ Atributos:
 - "populacaoEstimada"
 
 Métodos:
-- "cadastrarComunidade()"
-- "listarAreasMonitoradas()"
+- "cadastrarComunidade"
+- "listarAreasMonitoradas"
 
 Resumo:
 A Comunidade armazena informações sobre o local, sua população e as áreas que estão sendo monitoradas.
 
 Exemplo:
 
-Comunidade {
-  nome: "Santa Rosa do Purus",
+Comunidade 
+  nome: "Santa Rosa do Purus"
   localizacao: "Acre",
   populacaoEstimada: 7143
 
