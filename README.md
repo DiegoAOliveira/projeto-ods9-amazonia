@@ -91,10 +91,9 @@ Usuario
 Comunidade: Região monitorada pelo sistema.
 
 Atributos:
-- "id"
-- "nome"
-- "localizacao"
-- "populacaoEstimada"
+- Nome: Santa Rosa do Purus
+- Localizacao: Acre
+- PopulacaoEstimada: 7143
 
 Métodos:
 - "cadastrarComunidade"
@@ -103,21 +102,13 @@ Métodos:
 Resumo:
 A Comunidade armazena informações sobre o local, sua população e as áreas que estão sendo monitoradas.
 
-Exemplo:
-
-Comunidade 
-  nome: "Santa Rosa do Purus"
-  localizacao: "Acre"
-  populacaoEstimada: 7143
-
-
 Área Monitorada: representa uma das 6 frentes de acompanhamento "(Conectividade, Energia, Saneamento, Saúde, Educação, Meio Ambiente)"
 
 Atributos:
-- "id"
-- "tipo"
-- "statusAtual"
-- "comunidade"
+ID: identificador único da área monitorada
+Tipo: tipo da área: Conectividade, energia, saneamento, saúde, educação ou meio ambiente
+StatusAtual: situação atual da área
+Comunidade: comunidade à qual a área está vinculada
 
 Tipos:
 
