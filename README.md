@@ -66,27 +66,27 @@ No fim, a função principal da IA é identificar problema rápido e de forma au
 
 # 7. Modelagem Inicial — POO
 
-Usuário: Pessoa que utiliza o aplicativo.
-- "id"
-- "nome"
-- "email"
-- "senha"
-- "papel" (morador, agente de saúde ou gestor)
+### Usuário: Pessoa que utiliza o aplicativo.
 
-   Métodos:
-- "login"
-- "logout"
-- "atualizarPerfil"
+**Atributos:**  `id`,`nome`,`email`,`senha`,`papel` 
 
-Resumo:
+(morador, agente de saúde ou gestor)
+
+**Métodos:**  `login`,`logout`,`atualizarPerfil`
+
+**Resumo:**
+
 O Usuário armazena seus dados e seu papel no sistema. Pode fazer login, sair do sistema e atualizar seu perfil.
 
-Exemplo:
+**Exemplo:**
 
 Usuario 
-  nome: "João Silva",
-  email: "joao@email.com"
-  papel: "Agente de Saúde"
+
+  **nome:** `João Silva`
+  
+  **email:** `joao@email.com`
+  
+  **papel:** `Agente de Saúde`
 
 Comunidade: Região monitorada pelo sistema.
 
