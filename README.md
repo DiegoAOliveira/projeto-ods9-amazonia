@@ -89,6 +89,7 @@ Atributos: `id`,`Nome`,`Localizacao`,`PopulacaoEstimada`
 Métodos:`cadastrarComunidade`,`listarAreasMonitoradas`
 
 **Resumo:**
+
 A Comunidade armazena informações sobre o local, sua população e as áreas que estão sendo monitoradas.
 
 **Exemplo:**
@@ -119,6 +120,7 @@ a AreaMonitorada guarda o tipo de área, seu status atual e a qual comunidade pe
 **Métodos:** `coletarDados()`, `medirValor()`, `enviarDados()`, `verificarStatus()`
 
 **Resumo:**  
+
 O Sensor é responsável por coletar informações das áreas monitoradas, como dados relacionados à energia, saneamento, saúde, conectividade e meio ambiente. Ele armazena o valor medido, sua localização, a data e o status de funcionamento, podendo enviar os dados para o sistema.
 
 **Exemplo real:**
@@ -135,7 +137,8 @@ O Sensor é responsável por coletar informações das áreas monitoradas, como 
 
 **Métodos:** `gerarAlerta()`, `notificarResponsavel()`, `resolverAlerta()`
 
-**Resumo:**  
+**Resumo:** 
+
 O Alerta é gerado quando o sistema identifica uma situação que precisa de atenção. Ele pode ser criado a partir dos dados coletados pelos sensores ou de padrões identificados pela Inteligência Artificial. O alerta informa o tipo e a gravidade do problema, além de permitir que os responsáveis sejam notificados.
 
 **Exemplo real:**
@@ -155,7 +158,8 @@ Relatório: Registro das condições e ocorrências identificadas pelo sistema.
 
 **Métodos:** `gerarRelatorio()`, `analisarDados()`, `calcularIndicadores()`, `exportarRelatorio()`
 
-**Resumo:**  
+**Resumo:** 
+
 O Relatório reúne e organiza os dados coletados pelo sistema durante determinado período. Ele permite analisar as informações, calcular indicadores e apresentar os resultados de forma resumida, facilitando a tomada de decisões por usuários, prefeituras, ONGs e outros responsáveis.
 
 **Exemplo real:**
