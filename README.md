@@ -107,7 +107,7 @@ Exemplo:
 
 Comunidade 
   nome: "Santa Rosa do Purus"
-  localizacao: "Acre",
+  localizacao: "Acre"
   populacaoEstimada: 7143
 
 
