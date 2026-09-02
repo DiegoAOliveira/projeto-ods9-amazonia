@@ -74,7 +74,7 @@ No fim, a função principal da IA é identificar problema rápido e de forma au
 
 **Resumo:**
 
-O Usuário armazena seus dados e seu papel no sistema. Pode fazer login, sair do sistema e atualizar seu perfil.
+Usuário armazena seus dados e seu papel no sistema. Pode fazer login, sair do sistema e atualizar seu perfil.
 
 **Exemplo:**
 
