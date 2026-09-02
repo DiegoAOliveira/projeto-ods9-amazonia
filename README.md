@@ -66,7 +66,7 @@ No fim, a função principal da IA é identificar problema rápido e de forma au
 
 # 7. Modelagem Inicial — POO
 
-### Usuário: Pessoa que utiliza o aplicativo.
+### Usuario: Pessoa que utiliza o aplicativo.
 
 **Atributos:**  `id`, `nome`, `email`, `senha`, `papel` (morador, agente de saúde ou gestor)
 
@@ -118,9 +118,9 @@ StatusAtual: `Crítico`
 
 Comunidade: `Santa Rosa do Purus`
 
-### Sensor
+### Sensor: Responsável por coletar os dados das áreas monitoradas.
 
-**Atributos:** `id`, `tipo`, `localização`, `valorMedido`, `unidade`, `dataHora`, `status` (ativo/inativo)
+**Atributos:** `id`, `tipo`, `localização`, `valorMedido`, `unidade`, `dataHora`, `status`, `AreaMonitorada` (ativo/inativo)
 
 **Métodos:** `coletarDados()`, `medirValor()`, `enviarDados()`, `verificarStatus()`
 
@@ -137,9 +137,7 @@ Sensor {
     status: "ativo"
 }
 
-Alerta: Aviso sobre uma situações classificadas como normal, atenção e critico
-
-### Alerta
+### Alerta: Aviso sobre situações classificadas como normal, atenção ou crítico.
 
 **Atributos:** `id`, `tipo`, `gravidade`, `dataHora`, `status` (aberto/resolvido)
 
@@ -161,7 +159,7 @@ Esse alerta pode ser relacionado ao dado de que apenas **38,9% da população de
 
 Relatório: Registro das condições e ocorrências identificadas pelo sistema.
 
-### Relatório
+### Relatório: Registro das condições e ocorrências identificadas pelo sistema.
 
 **Atributos:** `id`, `titulo`, `periodo`, `dados`, `indicadores`, `dataGeracao`
 
@@ -179,8 +177,7 @@ Relatório {
     dataGeracao: "01/09/2026"
 }
 
----
-
+### ModeloPreditivo: Modelo de IA que analisa os dados e prevê situações críticas antes que aconteçam.
 
 # 7.1 Diagrama de Classes
 
