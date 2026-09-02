@@ -78,11 +78,9 @@ O Usuário armazena seus dados e seu papel no sistema. Pode fazer login, sair do
 
 **Exemplo:**
 
-  **nome:** `João Silva`
-  
-  **email:** `joao@email.com`
-  
-  **papel:** `Agente de Saúde`
+    nome: `João Silva`
+    email:`joao@email.com`
+    papel: `Agente de Saúde`
 
 ### Comunidade: Região monitorada pelo sistema.
 
@@ -95,11 +93,9 @@ A Comunidade armazena informações sobre o local, sua população e as áreas q
 
 **Exemplo:**
 
-**Nome:** `Santa Rosado Purus`
-
-**Localizacao:** `Acre,fronteira com o Peru`
-
-**PopulacaoEstimada:** `7143`
+    Nome: `Santa Rosado Purus`
+    Localizacao: `Acre,fronteira com o Peru`
+    PopulacaoEstimada: `7143`
 
 ### Área Monitorada: representa uma das 6 frentes de acompanhamento "(Conectividade, Energia, Saneamento, Saúde, Educação, Meio Ambiente)"
 
@@ -110,13 +106,11 @@ Métodos: `atualizarStatus`, `gerarHistorico`
 **Em resumo:** 
 a AreaMonitorada guarda o tipo de área, seu status atual e a qual comunidade pertence, e consegue atualizar seu status e gerar um histórico.
 
-**Exemplo real:**
+**Exemplo:**
 
-Tipo: `Saneamento`
-
-StatusAtual: `Crítico` 
-
-Comunidade: `Santa Rosa do Purus`
+    Tipo: `Saneamento`
+    StatusAtual: `Crítico` 
+    Comunidade: `Santa Rosa do Purus`
 
 ### Sensor: Responsável por coletar os dados das áreas monitoradas.
 
