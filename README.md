@@ -195,7 +195,7 @@ o ModeloPreditivo guarda a versão e a acurácia do modelo de IA treinado, e con
  
 # 7.1 Diagrama de Classes
 
-...
+O Diagrama esta localizando na pasta doc sendo um arquivo chamado Diagrama de classes 7.1.png
 
 # 8. Tecnologias
 
