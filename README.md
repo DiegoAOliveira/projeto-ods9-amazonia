@@ -113,7 +113,9 @@ a AreaMonitorada guarda o tipo de área, seu status atual e a qual comunidade pe
 **Exemplo real:**
 
 Tipo: `Saneamento`
+
 StatusAtual: `Crítico` 
+
 Comunidade: `Santa Rosa do Purus`
 
 ### Sensor
