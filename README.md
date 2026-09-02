@@ -231,52 +231,52 @@ Será desenvolvida em uma etapa posterior do projeto.
 
 ### *Gestão/Organização*
 
- Diego Alves Oliveira RA: 926118900 Usuário: DiegoAOliveira
+ Diego Alves Oliveira RA: `926118900` Usuário: DiegoAOliveira
  
 
  ### *Relações Entre as Classes/Definir Atributos e Métodos Parte1*
  
- Isabelly Ramos RA: 926103609 Usuário: @isabellyramosribeiro3-sudo
+ Isabelly Ramos RA: `926103609` Usuário: @isabellyramosribeiro3-sudo
  
 
  ### *Soluções Inteligentes com IA*
  
- Kauê Serrão Vatan RA: 926113835 Usuário: @kaueserraodev
+ Kauê Serrão Vatan RA: `926113835` Usuário: @kaueserraodev
 
 
  ### *Problema Real*
  
- Luis Felipe Araujo da Rocha RA: 926101627 Usuário: @Filipe10ofc
+ Luis Felipe Araujo da Rocha RA: `926101627` Usuário: @Filipe10ofc
 
  
  ### *Relações Entre as Classes/Definir Atributos e Métodos Parte2*
  
- Nathalia Cristina RA: 926113396 Usuário: @nacristina0602-oss
+ Nathalia Cristina RA: `926113396` Usuário: @nacristina0602-oss
  
  
  ### *Desenhar e Inserir o Diagrama de Classes Final*
  
- Nicolas Barbosa Lucena RA: 926102015 Usuário: @nicolaslucena897-
+ Nicolas Barbosa Lucena RA: `926102015` Usuário: @nicolaslucena897-
 
  
  ### *Público Alvo/inspecionar os ODS*
  
- Pedro Henrique Silva Ezequiel RA: 926105325 Usuário: @Pzequiel
+ Pedro Henrique Silva Ezequiel RA: `926105325` Usuário: @Pzequiel
  
 
  ### *Reserva/Apoio em Geral*
  
- Robson Passos Martins RA: 926112715 Usuário: Robsonmartins-pro
+ Robson Passos Martins RA: `926112715` Usuário: Robsonmartins-pro
  
  
  ### *Listar Principais Entidades do Sistema*
  
- Vinicius Santim de Jesus RA: 926104177 Usuário: @odsInfra
+ Vinicius Santim de Jesus RA: `926104177` Usuário: @odsInfra
  
  
  ### *Tecnologias do Projeto*
  
- Ygor Pliger de França RA: 926107940 Usuário: @ygorpliger
+ Ygor Pliger de França RA: `926107940` Usuário: @ygorpliger
  
 # 11. Gestão do Projeto
 
