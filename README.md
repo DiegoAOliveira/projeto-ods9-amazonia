@@ -105,7 +105,7 @@ A Comunidade armazena informações sobre o local, sua população e as áreas q
 Área Monitorada: representa uma das 6 frentes de acompanhamento "(Conectividade, Energia, Saneamento, Saúde, Educação, Meio Ambiente)"
 
 Atributos:
-ID: 
+
 Tipo: `Saneamento`
 StatusAtual: `Crítico` 
 Comunidade: `Santa Rosa do Purus`
