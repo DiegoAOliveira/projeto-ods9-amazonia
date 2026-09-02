@@ -233,64 +233,51 @@ Será desenvolvida em uma etapa posterior do projeto.
 
  Diego Alves Oliveira RA: 926118900 Usuário: DiegoAOliveira
  
- ### *Relações Entre as Classes/Definir Atributos e Métodos*
+
+ ### *Relações Entre as Classes/Definir Atributos e Métodos Parte1*
  
  Isabelly Ramos RA: 926103609 Usuário: @isabellyramosribeiro3-sudo
  
- ### *Solução Inteligente com IA*
+
+ ### *Soluções Inteligentes com IA*
  
  Kauê Serrão Vatan RA: 926113835 Usuário: @kaueserraodev
 
- 
+
+ ### *Problema Real*
  
  Luis Felipe Araujo da Rocha RA: 926101627 Usuário: @Filipe10ofc
 
  
+ ### *Relações Entre as Classes/Definir Atributos e Métodos Parte2*
  
  Nathalia Cristina RA: 926113396 Usuário: @nacristina0602-oss
  
  
+ ### *Desenhar e Inserir o Diagrama de Classes Final*
  
  Nicolas Barbosa Lucena RA: 926102015 Usuário: @nicolaslucena897-
 
  
+ ### *Público Alvo/inspecionar os ODS*
  
  Pedro Henrique Silva Ezequiel RA: 926105325 Usuário: @Pzequiel
  
- 
+
+ ### *Reserva/Apoio em Geral*
  
  Robson Passos Martins RA: 926112715 Usuário: Robsonmartins-pro
  
  
+ ### *Listar Principais Entidades do Sistema*
  
  Vinicius Santim de Jesus RA: 926104177 Usuário: @odsInfra
  
  
+ ### *Definir Stack do Projeto*
  
  Ygor Pliger de França RA: 926107940 Usuário: @ygorpliger
  
- 
- 
- 
- 
- Nome 2  Problema Real  Visão
- 
- Solução com IA  Visão
- 
- Nome 4  Público-Alvo / ODS  Visão 
- 
- Nome 5  Entidades principais  POO 
- 
- Nome 6  Atributos/métodos (parte 1)  POO 
- 
- Nome 7  Atributos/métodos (parte 2) + relações  POO 
- 
- Nome 8  Diagrama de Classes  POO 
- 
- Nome 9  Tecnologias  GitHub/Gestão 
- 
- Nome 10  — (reserva/ajuda geral)
-
 # 11. Gestão do Projeto
 
 O projeto será gerenciado utilizando GitHub Projects (Kanban) e Issues
