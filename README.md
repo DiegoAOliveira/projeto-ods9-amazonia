@@ -201,7 +201,7 @@ O Diagrama esta localizando na pasta doc sendo um arquivo chamado Diagrama de cl
 
 ### 1️⃣ Front-end (Aplicativo Móvel):
 
-Flutter + Dart - será utilizado para desenvolver o aplicativo móvel, permitindo que a mesma base de código seja utilizada para Android e iOS. O aplicativo apresentará aos moradores informações sobre conectividade, energia, saneamento, logística, educação e meio ambiente, além de exibir os níveis de situação Normal, Atenção e Crítico e receber notificações de alertas.
+Flutter + Dart - será utilizado para desenvolver o aplicativo móvel, permitindo que a mesma base de código seja utilizada para Android e iOS. O aplicativo apresentará aos moradores informações sobre conectividade, energia, saneamento, Saude, educação e meio ambiente, além de exibir os níveis de situação Normal, Alerta e Crítico e receber notificações de alertas.
 
 ### 2️⃣ Back-end / API:
 
