@@ -239,6 +239,8 @@ flowchart TB
     Manutencao -->|recebe ocorrências| Sistema
 ```
 
+### Resumo: O sistema atua como uma ponte de comunicação entre a necessidade da ponta (morador) e a tomada de decisão/execução (gestão e manutenção), otimizando a resposta do poder público.
+
 # 10. Organização da Equipe
 
 ### *Gestão/Organização*
