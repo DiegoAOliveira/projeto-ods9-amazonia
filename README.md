@@ -225,7 +225,19 @@ GitHub (repositório, Issues e Projects/Kanban) - utilizado para armazenar o có
 
 # 9. Arquitetura do Sistema
 
-Será desenvolvida em uma etapa posterior do projeto.
+```mermaid
+flowchart TB
+    Morador([Morador da Comunidade])
+    Agente([Agente Local])
+    Gestor([Gestor Público])
+    Manutencao([Equipe de Manutenção])
+    Sistema[Amazônia Inteligente]
+
+    Morador -->|reporta problemas, consulta status| Sistema
+    Agente -->|atualiza dados de campo| Sistema
+    Gestor -->|acompanha indicadores, recebe alertas| Sistema
+    Manutencao -->|recebe ocorrências| Sistema
+```
 
 # 10. Organização da Equipe
 
