@@ -272,6 +272,16 @@ flowchart TB
     IA -->|lê histórico| DB
 ```
 
+### 9.3.Justificativa das escolhas de tecnologia
+
+`.Flutter + Dart:` Framework multiplataforma, permitindo que o app rode em Android e IOS a parir de uma única base de código.
+
+`.Python + FastAPI:` Framework leve, rápido de desenvolver, com documentação automática de endpoiints.
+
+`.Firebase Firestore:` Banco de dados NoSQL com sincronização offline nativa, essencial diante da conectividade intermitente das comunidades monitoradas.
+
+`.Scikit-learn + Pandas:` Bibliotecas gratuitas e open-source, usadas para treinar um modelo próprio de Machine Learning, com realidade de Santa Rosa do Purus (AC).
+
 
 
 # 10. Organização da Equipe
