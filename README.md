@@ -225,6 +225,8 @@ GitHub (repositório, Issues e Projects/Kanban) - utilizado para armazenar o có
 
 # 9. Arquitetura do Sistema
 
+### 9.1 Diagrama de Contexto (Nível 1)
+
 ```mermaid
 flowchart TB
     Morador([Morador da Comunidade])
@@ -239,7 +241,38 @@ flowchart TB
     Manutencao -->|recebe ocorrências| Sistema
 ```
 
-### Resumo: O sistema atua como uma ponte de comunicação entre a necessidade da ponta (morador) e a tomada de decisão/execução (gestão e manutenção), otimizando a resposta do poder público.
+`Resumo: O sistema atua como uma ponte de comunicação entre a necessidade da ponta (morador) e a tomada de decisão/execução (gestão e manutenção), otimizando a resposta do poder público.`
+
+### 9.2 Diagrama de Contêineres (Nível 2)
+
+```mermaid
+flowchart TB
+    subgraph Usuarios[Usuários]
+        Morador([Morador])
+        Agente([Agente Local])
+        Gestor([Gestor Público])
+        Manutencao([Equipe de Manutenção])
+    end
+
+    subgraph Sistema[Amazônia Inteligente]
+        App[App Móvel<br/>Flutter + Dart]
+        API[API / Back-end<br/>Python + FastAPI]
+        IA[Modelo Preditivo<br/>Scikit-learn + Pandas]
+        DB[(Banco de Dados<br/>Firebase Firestore)]
+    end
+
+    Morador --> App
+    Agente --> App
+    Gestor --> App
+    Manutencao --> App
+
+    App -->|requisições HTTP| API
+    API -->|lê e grava dados| DB
+    API -->|consulta previsões| IA
+    IA -->|lê histórico| DB
+```
+
+
 
 # 10. Organização da Equipe
 
