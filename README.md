@@ -66,23 +66,25 @@ No fim, a função principal da IA é identificar problema rápido e de forma au
 
 # 7. Modelagem Inicial — POO
 
-### Usuario: Pessoa que utiliza o aplicativo.
+---
 
-**Atributos:**  `id`, `nome`, `email`, `senha`, `papel` (morador, agente de saúde ou gestor)
+### `Usuário` — Pessoa que utiliza o aplicativo.
 
-**Métodos:**  `login`, `logout`, `atualizarPerfil`
+**Atributos:** `id`, `nome`, `email`, `senha`, `papel` (morador, agente de saúde ou gestor)
 
-**Resumo:**
+**Métodos:** `login()`, `logout()`, `atualizarPerfil()`, `registrarOcorrencia()`
 
-Usuário armazena seus dados e seu papel no sistema. Pode fazer login, sair do sistema e atualizar seu perfil.
+**Resumo:** o Usuário armazena seus dados e seu papel no sistema. Pode fazer login, sair do sistema, atualizar seu perfil e registrar ocorrências manualmente (ex: um morador reportando falta de água), que geram um `Sensor` com origem manual.
 
 **Exemplo:**
 
-    nome: `João Silva`
-    email:`joao@email.com`
-    papel: `Agente de Saúde`
+    nome: "João Silva"
+    email: "joao@email.com"
+    papel: "Agente de Saúde"
 
-### Comunidade: Região monitorada pelo sistema.
+---
+
+### `Comunidade` — Região monitorada pelo sistema.
 
 Atributos: `id`,`Nome`,`Localizacao`,`PopulacaoEstimada` 
 
@@ -98,7 +100,9 @@ A Comunidade armazena informações sobre o local, sua população e as áreas q
     Localizacao: `Acre,fronteira com o Peru`
     PopulacaoEstimada: `7143`
 
-### Área Monitorada: representa uma das 6 frentes de acompanhamento "(Conectividade, Energia, Saneamento, Saúde, Educação, Meio Ambiente)"
+---
+
+### `Área Monitorada` — representa uma das 6 frentes de acompanhamento "(Conectividade, Energia, Saneamento, Saúde, Educação, Meio Ambiente)"
 
 Atributos: `id`, `Tipo`, `StatusAtual`, `Comunidade`
 
@@ -113,27 +117,37 @@ a AreaMonitorada guarda o tipo de área, seu status atual e a qual comunidade pe
     StatusAtual: `Crítico` 
     Comunidade: `Santa Rosa do Purus`
 
-### Sensor: Responsável por coletar os dados das áreas monitoradas.
+---
+### `Sensor` — Responsável por coletar os dados das áreas monitoradas.
 
-**Atributos:** `id`, `tipo`, `localização`, `valorMedido`, `unidade`, `dataHora`, `status`, `AreaMonitorada` (ativo/inativo)
+**Atributos:** `id`, `tipo`, `localizacao`, `valorMedido`, `unidade`, `dataHora`, `status` (ativo/inativo), `origem` (automático/manual), `usuarioRegistro` (referência, se manual), `areaMonitorada` (referência)
 
 **Métodos:** `coletarDados()`, `medirValor()`, `enviarDados()`, `verificarStatus()`
 
-**Resumo:**  
+**Resumo:** o Sensor representa qualquer fonte de dado de uma área monitorada — seja um dispositivo físico automático, seja um registro manual feito por um morador ou agente através do app. O atributo `origem` indica se o dado veio de hardware ou de entrada humana, e `usuarioRegistro` identifica quem reportou, quando aplicável.
 
-O Sensor é responsável por coletar informações das áreas monitoradas, como dados relacionados à energia, saneamento, saúde, conectividade e meio ambiente. Ele armazena o valor medido, sua localização, a data e o status de funcionamento, podendo enviar os dados para o sistema.
+**Exemplo real (dado automático):**
 
-**Exemplo real:**
-
-    tipo: "Qualidade da água",
-    localização: "Santa Rosa do Purus",
-    valorMedido: 38,9,
-    unidade: "%",
+    tipo: "Qualidade da água"
+    localizacao: "Santa Rosa do Purus"
+    valorMedido: 38.9
+    unidade: "%"
     status: "ativo"
+    origem: "automático"
 
-### Alerta: Aviso sobre situações classificadas como normal, atenção ou crítico.
+**Exemplo real (dado manual, reportado por morador):**
 
-**Atributos:** `id`, `tipo`, `gravidade`, `dataHora`, `status` (aberto/resolvido)
+    tipo: "Falta de água"
+    localizacao: "Santa Rosa do Purus"
+    status: "ativo"
+    origem: "manual"
+    usuarioRegistro: "João Silva (morador)"
+
+---
+
+### `Alerta` — Aviso sobre situações classificadas como normal, atenção ou crítico.
+
+**Atributos:** `id`, `tipo`, `gravidade`, `dataHora`, `status`
 
 **Métodos:** `gerarAlerta()`, `notificarResponsavel()`, `resolverAlerta()`
 
@@ -150,9 +164,9 @@ O Alerta é gerado quando o sistema identifica uma situação que precisa de ate
 
 Esse alerta pode ser relacionado ao dado de que apenas **38,9% da população de Santa Rosa do Purus tem acesso à água tratada**.
 
-Relatório: Registro das condições e ocorrências identificadas pelo sistema.
+---
 
-### Relatório: Registro das condições e ocorrências identificadas pelo sistema.
+### `Relatório` — Registro das condições e ocorrências identificadas pelo sistema.
 
 **Atributos:** `id`, `titulo`, `periodo`, `dados`, `indicadores`, `dataGeracao`
 
@@ -169,7 +183,9 @@ O Relatório reúne e organiza os dados coletados pelo sistema durante determina
     indicador: "38,9% da população com acesso à água tratada",
     dataGeracao: "01/09/2026"
 
-### ModeloPreditivo: Modelo de IA que analisa os dados e prevê situações críticas antes que aconteçam.
+---
+
+### `ModeloPreditivo` — Modelo de IA que analisa os dados e prevê situações críticas antes que aconteçam.
 
 **Atributos:** `id`, `versao`, `acuracia`, `dataTreinamento`
 
@@ -178,6 +194,8 @@ O Relatório reúne e organiza os dados coletados pelo sistema durante determina
 **Em resumo:**
 
 o ModeloPreditivo guarda a versão e a acurácia do modelo de IA treinado, e consegue treinar com novos dados e prever o status futuro de uma área monitorada.
+
+---
 
 ### Relações entre as 7 classes
 
@@ -188,6 +206,8 @@ o ModeloPreditivo guarda a versão e a acurácia do modelo de IA treinado, e con
  `Sensor` **pode gerar** `Alerta`
  
  `Usuário` **recebe** `Alerta` e **visualiza** `Relatório`
+ 
+ `Usuário` **pode registrar** `Sensor` (quando a origem é manual)
  
  `ModeloPreditivo` **analisa** `AreaMonitorada`
  
@@ -290,46 +310,37 @@ flowchart TB
 
  Diego Alves Oliveira RA: `926118900` Usuário: DiegoAOliveira
  
-
  ### *Relações Entre as Classes/Definir Atributos e Métodos Parte1*
- 
- Isabelly Ramos RA: `926103609` Usuário: @isabellyramosribeiro3-sudo
- 
 
+ Nathalia Cristina RA: `926113396` Usuário: @nacristina0602-oss
+ 
  ### *Soluções Inteligentes com IA*
  
  Kauê Serrão Vatan RA: `926113835` Usuário: @kaueserraodev
-
 
  ### *Problema Real*
  
  Luis Felipe Araujo da Rocha RA: `926101627` Usuário: @Filipe10ofc
 
- 
  ### *Relações Entre as Classes/Definir Atributos e Métodos Parte2*
  
- Nathalia Cristina RA: `926113396` Usuário: @nacristina0602-oss
- 
+ Isabelly Ramos RA: `926103609` Usuário: @isabellyramosribeiro3-sudo
  
  ### *Desenhar e Inserir o Diagrama de Classes Final*
  
  Nicolas Barbosa Lucena RA: `926102015` Usuário: @nicolaslucena897-
 
- 
  ### *Público Alvo/inspecionar os ODS*
  
  Pedro Henrique Silva Ezequiel RA: `926105325` Usuário: @Pzequiel
  
-
  ### *Reserva/Apoio em Geral*
  
  Robson Passos Martins RA: `926112715` Usuário: Robsonmartins-pro
  
- 
  ### *Listar Principais Entidades do Sistema*
  
  Vinicius Santim de Jesus RA: `926104177` Usuário: @odsInfra
- 
  
  ### *Tecnologias do Projeto*
  
