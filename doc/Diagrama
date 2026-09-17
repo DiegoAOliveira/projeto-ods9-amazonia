@@ -1,0 +1,89 @@
+
+```mermaid
+classDiagram
+    class Usuario {
+        +int id
+        +String nome
+        +String email
+        +String papel
+        +login()
+        +logout()
+        +atualizarPerfil()
+        +registrarOcorrencia()
+    }
+
+    class Comunidade {
+        +int id
+        +String nome
+        +String localizacao
+        +int populacaoEstimada
+        +cadastrarComunidade()
+        +listarAreasMonitoradas()
+    }
+
+    class AreaMonitorada {
+        +int id
+        +String tipo
+        +String statusAtual
+        +atualizarStatus()
+        +gerarHistorico()
+    }
+
+    class Sensor {
+        +int id
+        +String tipo
+        +String localizacao
+        +float valorMedido
+        +String unidade
+        +DateTime dataHora
+        +String status
+        +String origem
+        +Usuario usuarioRegistro
+        +coletarDados()
+        +medirValor()
+        +enviarDados()
+        +verificarStatus()
+    }
+
+    class Alerta {
+        +int id
+        +String tipo
+        +String gravidade
+        +DateTime dataHora
+        +String status
+        +gerarAlerta()
+        +notificarResponsavel()
+        +resolverAlerta()
+    }
+
+    class Relatorio {
+        +int id
+        +String titulo
+        +String periodo
+        +String dados
+        +String indicadores
+        +DateTime dataGeracao
+        +gerarRelatorio()
+        +analisarDados()
+        +calcularIndicadores()
+        +exportarRelatorio()
+    }
+
+    class ModeloPreditivo {
+        +int id
+        +String versao
+        +float acuracia
+        +DateTime dataTreinamento
+        +treinar()
+        +preverStatus()
+    }
+
+    Comunidade "1" --> "*" AreaMonitorada : possui
+    AreaMonitorada "1" --> "*" Sensor : monitorada por
+    Sensor "1" --> "*" Alerta : gera
+    Usuario "1" --> "*" Alerta : recebe
+    Usuario "1" --> "*" Relatorio : visualiza
+    Usuario "1" --> "*" Sensor : pode registrar
+    ModeloPreditivo "1" --> "*" AreaMonitorada : analisa
+    ModeloPreditivo "1" --> "*" Alerta : pode gerar
+```
