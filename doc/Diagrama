@@ -1,4 +1,5 @@
 ```mermaid
+
 classDiagram
     class Usuario {
         +int id
@@ -11,6 +12,8 @@ classDiagram
         +registrarOcorrencia()
     }
 
+```
+
     class Comunidade {
         +int id
         +String nome
@@ -20,6 +23,8 @@ classDiagram
         +listarAreasMonitoradas()
     }
 
+```
+
     class AreaMonitorada {
         +int id
         +String tipo
@@ -27,6 +32,8 @@ classDiagram
         +atualizarStatus()
         +gerarHistorico()
     }
+
+```
 
     class Sensor {
         +int id
@@ -44,6 +51,8 @@ classDiagram
         +verificarStatus()
     }
 
+```
+
     class Alerta {
         +int id
         +String tipo
@@ -54,6 +63,8 @@ classDiagram
         +notificarResponsavel()
         +resolverAlerta()
     }
+
+```
 
     class Relatorio {
         +int id
@@ -68,6 +79,8 @@ classDiagram
         +exportarRelatorio()
     }
 
+```
+
     class ModeloPreditivo {
         +int id
         +String versao
@@ -76,6 +89,8 @@ classDiagram
         +treinar()
         +preverStatus()
     }
+
+```
 
     Comunidade "1" --> "*" AreaMonitorada : possui
     AreaMonitorada "1" --> "*" Sensor : monitorada por
