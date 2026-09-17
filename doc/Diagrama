@@ -1,6 +1,4 @@
-
 ```mermaid
-
 classDiagram
     class Usuario {
         +int id
