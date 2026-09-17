@@ -350,13 +350,15 @@ flowchart TB
 
 O projeto será gerenciado utilizando GitHub Projects (Kanban) e Issues
 
-*Fazer : tarefas planejadas, ainda não iniciadas*
+*To Do : tarefas planejadas, ainda não iniciadas*
 
-*Em Progreso : em desenvolvimento*
+*In progress: em desenvolvimento*
 
-*Análise : aguardando revisão de outro membro antes de mesclar*
+*review : aguardando revisão de outro membro antes de mesclar*
 
-*Feito : concluído e mesclado na main*
+*Done : concluído e mesclado na main*
+
+*Ready : Está pronto pra ser retirado*
 
 Cada tarefa do projeto corresponde a uma Issue no GitHub, atribuída a um responsável. 
 As entregas quinzenais são acompanhadas movendo os cartões entre as colunas conforme o progresso.
