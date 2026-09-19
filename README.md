@@ -245,6 +245,8 @@ GitHub (repositório, Issues e Projects/Kanban) - utilizado para armazenar o có
 
 # 9. Arquitetura do Sistema
 
+Texto explicando>>>
+
 ### 9.1 Diagrama de Contexto (Nível 1)
 
 ```mermaid
