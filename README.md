@@ -257,10 +257,10 @@ flowchart TB
     Manutencao([Equipe de Manutenção])
     Sistema[Amazônia Inteligente]
 
-    Morador -->|reporta problemas, consulta status| Sistema
-    Agente -->|atualiza dados de campo| Sistema
-    Gestor -->|acompanha indicadores, recebe alertas| Sistema
-    Manutencao -->|recebe ocorrências| Sistema
+    Morador -->|reporta problemas, consulta status   | Sistema
+    Agente -->|atualiza dados de campo     | Sistema
+    Gestor -->|acompanha indicadores, recebe alertas    | Sistema
+    Manutencao -->|recebe ocorrências     | Sistema
 ```
 
 `Resumo: O sistema atua como uma ponte de comunicação entre a necessidade da ponta (morador) e a tomada de decisão/execução (gestão e manutenção), otimizando a resposta do poder público.`
