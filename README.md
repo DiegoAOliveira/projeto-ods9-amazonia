@@ -280,9 +280,9 @@ flowchart TB
 
     subgraph Sistema[Amazônia Inteligente]
         App[App Móvel<br/>Flutter + Dart]
-        API[API / Back-end<br/>Python + FastAPI]
-        IA[Modelo Preditivo<br/>Scikit-learn + Pandas]
-        DB[(Banco de Dados<br/>Firebase Firestore)]
+        API[API / Back-end<br/>Java]
+        IA[Integração com IA<br/>API Groq/OpenRouter]
+        DB[(Banco de Dados<br/>MySQL)]
     end
 
     Morador --> App
@@ -292,8 +292,7 @@ flowchart TB
 
     App -->|requisições HTTP| API
     API -->|lê e grava dados| DB
-    API -->|consulta previsões| IA
-    IA -->|lê histórico| DB
+    API -->|envia prompt, recebe resposta| IA
 ```
 
 ### 9.3.Justificativa das escolhas de tecnologia
