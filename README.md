@@ -21,6 +21,8 @@ A dificuldade também aparece no acesso ao saneamento. Dados do IBGE mostram que
 Além disso, estudos sobre comunidades ribeirinhas mostram que o isolamento geográfico interfere diretamente no acesso a serviços. Em determinadas comunidades, moradores podem precisar realizar deslocamentos de muitas horas para chegar aos centros urbanos, enquanto o acesso à internet também pode ser limitado ou instável.
 Dessa forma, o problema não é apenas a falta de infraestrutura, mas também a dificuldade de acompanhar a situação dessas comunidades e identificar rapidamente quais áreas precisam de atenção.
 
+Um exemplo concreto dessa realidade é o município de Santa Rosa do Purus (AC), um dos mais isolados do Brasil, onde apenas 38,9% da população tem acesso a abastecimento de água tratada — dado utilizado como referência na modelagem deste projeto.
+
 # 4. Solução com Inteligência Artificial
 
 ### Como a Inteligência Artificial será utilizada:
@@ -147,7 +149,7 @@ a AreaMonitorada guarda o tipo de área, seu status atual e a qual comunidade pe
 
 ### `Alerta` — Aviso sobre situações classificadas como normal, atenção ou crítico.
 
-**Atributos:** `id`, `tipo`, `gravidade`, `dataHora`, `status`
+**Atributos:** `id`, `tipo`, `gravidade`, `dataHora`, `status` (aberto/resolvido)
 
 **Métodos:** `gerarAlerta()`, `notificarResponsavel()`, `resolverAlerta()`
 
