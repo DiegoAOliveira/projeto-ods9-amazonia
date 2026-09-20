@@ -297,15 +297,13 @@ flowchart TB
 
 ### 9.3.Justificativa das escolhas de tecnologia
 
-`.Flutter + Dart:` Framework multiplataforma, permitindo que o app rode em Android e IOS a parir de uma única base de código.
+`.Flutter + Dart:` Framework multiplataforma, permitindo que o app rode em Android e iOS a partir de uma única base de código.
 
-`.Python + FastAPI:` Framework leve, rápido de desenvolver, com documentação automática de endpoiints.
+`.Java:` Linguagem já estudada na disciplina de Programação Orientada a Objetos, reaproveitando o conhecimento da sala de aula para o desenvolvimento do back-end, com suporte nativo a classes e objetos — alinhado com a modelagem POO já desenvolvida no projeto.
 
-`.Firebase Firestore:` Banco de dados NoSQL com sincronização offline nativa, essencial diante da conectividade intermitente das comunidades monitoradas.
+`.MySQL:` Banco de dados relacional, permitindo a criação de um diagrama físico/lógico (MER) claro das entidades do sistema, com relacionamentos bem definidos entre as tabelas.
 
-`.Scikit-learn + Pandas:` Bibliotecas gratuitas e open-source, usadas para treinar um modelo próprio de Machine Learning, com realidade de Santa Rosa do Purus (AC).
-
-
+`.API Groq/OpenRouter:` Serviços gratuitos de acesso a modelos de IA prontos (como Llama 3 e Mistral), permitindo validar tecnicamente a integração entre o back-end e a Inteligência Artificial sem custo, através de chamadas HTTP simples.
 
 # 10. Organização da Equipe
 
