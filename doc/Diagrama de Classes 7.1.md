@@ -106,7 +106,7 @@ classDiagram
     Comunidade "1" --> "*" AreaMonitorada : possui
     AreaMonitorada "1" --> "*" Sensor : monitorada por
     Sensor "1" --> "*" Alerta : gera
-    Usuario "1" --> "*" Alerta : recebe
+    Usuario "1" --> "*" Alerta : Recebe
     Usuario "1" --> "*" Relatorio : visualiza
     Usuario "1" --> "*" Sensor : pode registrar
     ModeloPreditivo "1" --> "*" AreaMonitorada : analisa
