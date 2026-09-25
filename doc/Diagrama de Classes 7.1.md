@@ -32,15 +32,15 @@ classDiagram
         +int id
         +String tipo
         +String statusAtual
+        +int comunidadeId
         +atualizarStatus()
         +gerarHistorico()
     }
-    note for AreaMonitorada "6 Frentes:
-    Conectividade, Energia,Saneamento, Saúde,Educação, Meio Ambiente
+    note for AreaMonitorada "6 Frentes: Conectividade, Energia,
+    Saneamento, Saúde, Educação, Meio Ambiente
     Exemplo Real:
     Tipo: Saneamento
-    Status: Crítico
-    Comunidade: Santa Rosa do Purus"
+    Status: Crítico"
 
     class Sensor {
         +int id
@@ -51,7 +51,8 @@ classDiagram
         +DateTime dataHora
         +String status
         +String origem
-        +Usuario usuarioRegistro
+        +int usuarioRegistroId
+        +int areaMonitoradaId
         +coletarDados()
         +medirValor()
         +enviarDados()
@@ -59,8 +60,8 @@ classDiagram
     }
     note for Sensor "Exemplo Real:
     Tipo: Qualidade da água
-    Local: Santa Rosa do Purus
-    Valor: 38.9% (Crítico)\nStatus: ativo"
+    Valor: 38.9% (Crítico)
+    Status: ativo"
 
     class Alerta {
         +int id
@@ -68,13 +69,14 @@ classDiagram
         +String gravidade
         +DateTime dataHora
         +String status
+        +int sensorId
         +gerarAlerta()
         +notificarResponsavel()
         +resolverAlerta()
     }
     note for Alerta "Exemplo Real:
     Tipo: Baixa cobertura água
-    Gravidade: Alta\nData: 01/09/2026
+    Gravidade: Alta
     Status: aberto"
 
     class Relatorio {
@@ -91,8 +93,19 @@ classDiagram
     }
     note for Relatorio "Exemplo Real:
     Título: Monitoramento Saneamento
-    Período: 2026\nIndicador: 38.9% água tratada
-    Data: 01/09/2026"
+    Indicador: 38.9% água tratada"
+
+    class AnaliseIA {
+        +int id
+        +String prompt
+        +String resposta
+        +DateTime dataHora
+        +int alertaGeradoId
+        +enviarParaIA()
+        +salvarResposta()
+    }
+    note for AnaliseIA "Implementação atual do MVP
+    via API Groq/OpenRouter"
 
     class ModeloPreditivo {
         +int id
@@ -102,12 +115,15 @@ classDiagram
         +treinar()
         +preverStatus()
     }
+    note for ModeloPreditivo "Planejado — fase futura"
 
     Comunidade "1" --> "*" AreaMonitorada : possui
     AreaMonitorada "1" --> "*" Sensor : monitorada por
     Sensor "1" --> "*" Alerta : gera
-    Usuario "1" --> "*" Alerta : Recebe
+    Usuario "1" --> "*" Alerta : recebe
     Usuario "1" --> "*" Relatorio : visualiza
     Usuario "1" --> "*" Sensor : pode registrar
-    ModeloPreditivo "1" --> "*" AreaMonitorada : analisa
-    ModeloPreditivo "1" --> "*" Alerta : pode gerar ```
+    Sensor "1" --> "*" AnaliseIA : é analisado por
+    AnaliseIA "1" --> "*" Alerta : pode gerar
+    ModeloPreditivo "1" --> "*" AreaMonitorada : analisa (futuro)
+    ModeloPreditivo "1" --> "*" Alerta : pode gerar (futuro)
