@@ -1,104 +1,222 @@
+package com.amazoniainteligente;
 
-package amazonia;
+import com.amazoniainteligente.model.AnaliseIA;
+import com.amazoniainteligente.model.Alerta;
+import com.amazoniainteligente.model.Sensor;
+import com.amazoniainteligente.service.GroqService;
 
-import com.fasterxml.jackson.databind.JsonNode;
-
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+import java.util.Properties;
+import java.util.Scanner;
 
 /**
- * IA de alertas: lê o histórico da área (sensores + ocorrências de moradores e agentes),
- * pede à Groq uma avaliação de risco ponderando a confiabilidade de cada fonte e,
- * se houver risco, cria o alerta e notifica os usuários da comunidade.
+ * MVP do Amazônia Inteligente — console simples cobrindo as 3
+ * funcionalidades essenciais pedidas nesta entrega:
+ *   1) Cadastrar a entidade principal (Sensor)
+ *   2) Enviar para a IA analisar (Groq)
+ *   3) Salvar a resposta da IA (AnaliseIA) e, se for o caso, gerar um Alerta
  */
-public class AlertaIA {
-    private static final int LIMITE_HISTORICO = 20;
-    private static final double CONFIANCA_MINIMA = 0.5;
 
-    private static final String SISTEMA = """
-            Você é o sistema de alerta de infraestrutura de comunidades isoladas da Amazônia.
-            Avalie o risco de UMA área com base no histórico (mais recente primeiro).
-            Peso das fontes:
-            - SENSOR automático: confiança alta.
-            - Agente de saúde marcado como confiável: confiança alta.
-            - Morador ou usuário não confiável: confiança baixa isoladamente; só eleve o risco se houver
-              vários relatos parecidos ou confirmação de sensor/agente confiável.
-            Considere tendência (piora ao longo do tempo) e recorrência, não só o último dado.
-            Responda APENAS em JSON:
-            {"risco":"NORMAL|ATENCAO|CRITICO","gravidade":"BAIXA|MEDIA|ALTA","confianca":0.0-1.0,
-             "tipo":"título curto do alerta","justificativa":"1-2 frases",
-             "mensagem_morador":"até 140 caracteres, linguagem simples, com o que fazer",
-             "mensagem_gestor":"até 300 caracteres, técnica, com fontes e ação sugerida"}
-            """;
+public class Main {
 
-    private final GroqClient groq;
-    private final AmazoniaDao dao;
-    private final HistoricoDao hist;
-    private final Notificador notificador;
+    private static final List<Sensor> sensores = new ArrayList<>();
+    private static final List<Alerta> alertas = new ArrayList<>();
+    private static final List<AnaliseIA> analises = new ArrayList<>();
 
-    public AlertaIA(GroqClient groq, AmazoniaDao dao, HistoricoDao hist, Notificador notificador) {
-        this.groq = groq;
-        this.dao = dao;
-        this.hist = hist;
-        this.notificador = notificador;
-    }
-
-    /** Chame após cada nova leitura de sensor ou ocorrência registrada. */
-    public void avaliar(long areaId) throws Exception {
-        String area = hist.tipoDaArea(areaId);
-        List<HistoricoDao.Registro> registros = hist.historico(areaId, LIMITE_HISTORICO);
-        if (registros.isEmpty()) return;
-
-        JsonNode r = groq.pedirJson(SISTEMA, "Área: " + area + "\nHistórico:\n" + formatar(registros));
-
-        String risco = r.path("risco").asText("NORMAL");
-        double confianca = r.path("confianca").asDouble(0);
-        System.out.printf("[IA] %s -> %s (confiança %.2f): %s%n", area, risco, confianca,
-                r.path("justificativa").asText());
-
-        if (risco.equals("NORMAL")) {
-            dao.atualizarStatusArea(areaId, "NORMAL");
-            return;
-        }
-        if (confianca < CONFIANCA_MINIMA) {
-            System.out.println("[IA] Confiança baixa: aguardando confirmação de sensor ou agente confiável.");
+    public static void main(String[] args) {
+        String apiKey = carregarApiKey();
+        if (apiKey == null || apiKey.isBlank()) {
+            System.out.println("ERRO: não encontrei a chave da API do Groq.");
+            System.out.println("Crie um arquivo config.properties (veja config.properties.example)");
+            System.out.println("ou defina a variável de ambiente GROQ_API_KEY antes de rodar.");
             return;
         }
 
-        String gravidade = r.path("gravidade").asText("MEDIA");
-        dao.atualizarStatusArea(areaId, risco);
-        if (hist.temAlertaAberto(areaId, gravidade)) return; // evita alerta duplicado
+        GroqService groq = new GroqService(apiKey);
+        Scanner scanner = new Scanner(System.in);
 
-        String descricao = r.path("justificativa").asText() + String.format(" (confiança %.0f%%)", confianca * 100);
-        long alertaId = dao.inserirAlerta(areaId, r.path("tipo").asText("Risco em " + area), descricao, gravidade);
-        notificar(areaId, alertaId, risco, r);
-    }
+        while (true) {
+            System.out.println("\n===== Amazônia Inteligente MVP =====");
+            System.out.println("1 - Cadastrar sensor/ocorrência (manual)");
+            System.out.println("2 - Enviar um sensor para a IA analisar");
+            System.out.println("3 - Listar sensores");
+            System.out.println("4 - Listar alertas gerados");
+            System.out.println("5 - Listar histórico de análises da IA");
+            System.out.println("0 - Sair");
+            System.out.print("Escolha uma opção: ");
 
-    private void notificar(long areaId, long alertaId, String risco, JsonNode r) throws Exception {
-        String canal = risco.equals("CRITICO") ? "SMS" : "PUSH"; // crítico também por SMS (conectividade mínima)
-        for (HistoricoDao.UsuarioAlvo u : hist.usuariosDaComunidade(hist.comunidadeDaArea(areaId))) {
-            String msg = u.papel().equals("GESTOR")
-                    ? r.path("mensagem_gestor").asText()
-                    : r.path("mensagem_morador").asText();
-            long notId = hist.inserirNotificacao(u.id(), alertaId, msg, canal);
-            notificador.enviar(u, canal, msg);
-            hist.marcarEnviada(notId);
-        }
-    }
+            String opcao = scanner.nextLine().trim();
 
-    private String formatar(List<HistoricoDao.Registro> registros) {
-        StringBuilder sb = new StringBuilder();
-        for (HistoricoDao.Registro g : registros) {
-            sb.append("- ").append(g.dataHora()).append(" | ");
-            if (g.origem().equals("AUTOMATICO")) {
-                sb.append("SENSOR | ").append(g.tipo()).append(": ").append(g.valor()).append(' ')
-                        .append(g.unidade());
-            } else {
-                sb.append("RELATO | ").append(g.tipo()).append(" | por ").append(g.reportadoPor())
-                        .append(" (").append(g.papel()).append(g.confiavel() ? ", CONFIÁVEL" : ", não confiável")
-                        .append(')');
+            switch (opcao) {
+                case "1" -> cadastrarSensor(scanner);
+                case "2" -> enviarParaIA(scanner, groq);
+                case "3" -> listarSensores();
+                case "4" -> listarAlertas();
+                case "5" -> listarAnalises();
+                case "0" -> {
+                    System.out.println("Até mais!");
+                    return;
+                }
+                default -> System.out.println("Opção inválida.");
             }
-            sb.append('\n');
         }
-        return sb.toString();
+    }
+
+    // 1) Cadastro da entidade principal -------------------------------------
+    private static void cadastrarSensor(Scanner scanner) {
+        System.out.print("Tipo de ocorrência (ex: Falta de agua): ");
+        String tipo = scanner.nextLine().trim();
+        if (tipo.isBlank()) {
+            System.out.println("Tipo não pode ficar em branco. Cadastro cancelado.");
+            return;
+        }
+
+        System.out.print("Localização (ex: Santa Rosa do Purus): ");
+        String localizacao = scanner.nextLine().trim();
+        if (localizacao.isBlank()) {
+            System.out.println("Localização não pode ficar em branco. Cadastro cancelado.");
+            return;
+        }
+
+        System.out.print("Valor medido (número, ou deixe em branco se não houver): ");
+        String valorTexto = scanner.nextLine().trim();
+        Double valor = null;
+        if (!valorTexto.isBlank()) {
+            try {
+                valor = Double.valueOf(valorTexto.replace(",", "."));
+            } catch (NumberFormatException e) {
+                System.out.println("Valor inválido — cadastrando sem valor numérico.");
+            }
+        }
+
+        System.out.print("Unidade (ex: %, ou deixe em branco): ");
+        String unidade = scanner.nextLine().trim();
+        if (unidade.isBlank()) unidade = null;
+
+        System.out.print("Quem está reportando (nome do morador/agente): ");
+        String usuario = scanner.nextLine().trim();
+
+        Sensor sensor = new Sensor(tipo, localizacao, valor, unidade, "manual", usuario);
+        sensores.add(sensor);
+
+        System.out.println("Cadastrado com sucesso: " + sensor);
+    }
+
+    // 2) Integração com a IA + 3) salvar o retorno ---------------------------
+    private static void enviarParaIA(Scanner scanner, GroqService groq) {
+        if (sensores.isEmpty()) {
+            System.out.println("Cadastre um sensor primeiro (opção 1).");
+            return;
+        }
+
+        listarSensores();
+        System.out.print("Digite o número (#id) do sensor a analisar: ");
+        int id;
+        try {
+            id = Integer.parseInt(scanner.nextLine().trim());
+        } catch (NumberFormatException e) {
+            System.out.println("Número inválido.");
+            return;
+        }
+
+        Sensor sensor = sensores.stream()
+                .filter(s -> s.getId() == id)
+                .findFirst()
+                .orElse(null);
+
+        if (sensor == null) {
+            System.out.println("Sensor não encontrado.");
+            return;
+        }
+
+        String prompt = montarPrompt(sensor);
+        System.out.println("\nEnviando para a IA...\nPrompt: " + prompt);
+
+        try {
+            String resposta = groq.enviarPrompt(prompt);
+            System.out.println("\nResposta da IA:\n" + resposta);
+
+            AnaliseIA analise = new AnaliseIA(prompt, resposta);
+            analises.add(analise);
+
+            String gravidade = classificarGravidade(resposta);
+            if (!gravidade.equals("NORMAL")) {
+                Alerta alerta = new Alerta(sensor.getTipo(), gravidade, sensor.getId());
+                alertas.add(alerta);
+                analise.setAlertaGeradoId(alerta.getId());
+                System.out.println("\n Alerta gerado automaticamente: " + alerta);
+            } else {
+                System.out.println("\nA IA não identificou situação crítica...nenhum alerta gerado.");
+            }
+
+        } catch (IOException | InterruptedException e) {
+            System.out.println("Erro ao chamar a API do Groq: " + e.getMessage());
+        }
+    }
+
+    private static String montarPrompt(Sensor sensor) {
+        String valorTexto = (sensor.getValorMedido() != null)
+                ? sensor.getValorMedido() + (sensor.getUnidade() != null ? sensor.getUnidade() : "")
+                : "não informado";
+
+        return "Você é um assistente que monitora infraestrutura em comunidades isoladas "
+                + "da Amazônia (como Santa Rosa do Purus, AC). "
+                + "Analise esta ocorrência e responda em uma única linha, começando "
+                + "exatamente com uma destas palavras: NORMAL, ATENCAO ou CRITICO, "
+                + "seguida de dois pontos e uma explicação curta (até 2 frases).\n\n"
+                + "Tipo: " + sensor.getTipo() + "\n"
+                + "Local: " + sensor.getLocalizacao() + "\n"
+                + "Valor medido: " + valorTexto;
+    }
+
+    /**
+     * Lê a primeira palavra da resposta da IA (NORMAL / ATENCAO / CRITICO)
+     * e converte para a gravidade usada na classe Alerta.
+     */
+    private static String classificarGravidade(String respostaIA) {
+        String primeiraPalavra = respostaIA.trim().split("[:\\s]+", 2)[0].toUpperCase(Locale.ROOT);
+        return switch (primeiraPalavra) {
+            case "CRITICO" -> "Alta";
+            case "ATENCAO" -> "Média";
+            default -> "NORMAL";
+        };
+    }
+
+    // Listagens ---------------------------------------------------------------
+    private static void listarSensores() {
+        System.out.println("\n-- Sensores cadastrados --");
+        if (sensores.isEmpty()) System.out.println("(nenhum ainda)");
+        sensores.forEach(System.out::println);
+    }
+
+    private static void listarAlertas() {
+        System.out.println("\n-- Alertas gerados --");
+        if (alertas.isEmpty()) System.out.println("(nenhum ainda)");
+        alertas.forEach(System.out::println);
+    }
+
+    private static void listarAnalises() {
+        System.out.println("\n-- Histórico de análises da IA --");
+        if (analises.isEmpty()) System.out.println("(nenhuma ainda)");
+        analises.forEach(System.out::println);
+    }
+
+    // Configuração --------------------------------------------------------------
+    private static String carregarApiKey() {
+        String doAmbiente = System.getenv("GROQ_API_KEY");
+        if (doAmbiente != null && !doAmbiente.isBlank()) {
+            return doAmbiente;
+        }
+        try (FileInputStream in = new FileInputStream("config.properties")) {
+            Properties props = new Properties();
+            props.load(in);
+            return props.getProperty("groq.api.key");
+        } catch (IOException e) {
+            return null;
+        }
     }
 }
