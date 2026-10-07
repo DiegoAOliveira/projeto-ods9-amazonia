@@ -1,0 +1,45 @@
+package com.amazoniainteligente.model;
+
+import java.time.LocalDateTime;
+
+/**
+ * Aviso gerado a partir da análise da IA sobre um Sensor.
+ */
+public class Alerta {
+
+    private static int proximoId = 1;
+
+    private final int id;
+    private String tipo;
+    private String gravidade;   // Baixa / Média / Alta / Crítica
+    private final LocalDateTime dataHora;
+    private String status;      // aberto / resolvido
+    private final int sensorId;
+
+    public Alerta(String tipo, String gravidade, int sensorId) {
+        this.id = proximoId++;
+        this.tipo = tipo;
+        this.gravidade = gravidade;
+        this.dataHora = LocalDateTime.now();
+        this.status = "aberto";
+        this.sensorId = sensorId;
+    }
+
+    public int getId() { return id; }
+    public String getTipo() { return tipo; }
+    public String getGravidade() { return gravidade; }
+    public LocalDateTime getDataHora() { return dataHora; }
+    public String getStatus() { return status; }
+    public int getSensorId() { return sensorId; }
+
+    public void resolverAlerta() {
+        this.status = "resolvido";
+    }
+
+    @Override
+    public String toString() {
+        return "Alerta #" + id + " | " + tipo + " | gravidade: " + gravidade
+                + " | status: " + status + " | (do Sensor #" + sensorId + ")";
+    }
+}
+
