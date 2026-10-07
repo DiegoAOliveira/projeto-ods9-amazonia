@@ -226,16 +226,13 @@ O Diagrama esta localizando na pasta doc sendo um arquivo chamado Diagrama de cl
 Flutter + Dart - será utilizado para desenvolver o aplicativo móvel, permitindo que a mesma base de código seja utilizada para Android e iOS. O aplicativo apresentará aos moradores informações sobre conectividade, energia, saneamento, Saude, educação e meio ambiente, além de exibir os níveis de situação Normal, Alerta e Crítico e receber notificações de alertas.
 
 ### 2️⃣ Back-end / API:
-
-Python + FastAPI - será utilizado para desenvolver a API responsável pela comunicação entre o aplicativo, o banco de dados, a Inteligência Artificial e os dados de monitoramento. A API receberá os dados dos diferentes segmentos, processará as informações necessárias e disponibilizará os resultados para o aplicativo.
+Java — linguagem já estudada na disciplina de POO, reaproveitando o conhecimento da sala de aula no desenvolvimento do back-end.
 
 ### 3️⃣ Banco de Dados:
-
-Firebase Firestore - será utilizado para armazenar as informações do sistema, como dados das comunidades, usuários, registros de monitoramento, ocorrências e alertas. O banco permitirá que as informações sejam consultadas e atualizadas pelo sistema de forma integrada ao aplicativo.
+MySQL — banco relacional, com diagrama físico/lógico (MER) das entidades do sistema.
 
 ### 4️⃣ Inteligência Artificial:
-
-Python + Scikit-learn + Pandas — modelo próprio de Machine Learning, treinado com dados simulados baseados na realidade de Santa Rosa do Purus (AC)
+API Groq (modelo openai/gpt-oss-120b) — integração real via chamada HTTP, validando tecnicamente a comunicação entre o back-end e a Inteligência Artificial.
 
 ### 5️⃣ Coleta de Dados (Sensores):
 
