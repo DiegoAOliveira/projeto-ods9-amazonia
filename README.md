@@ -98,7 +98,7 @@ A Comunidade armazena informações sobre o local, sua população e as áreas q
 
 **Exemplo:**
 
-    Nome: `Santa Rosado Purus`
+    Nome: `Santa Rosa do Purus`
     Localizacao: `Acre,fronteira com o Peru`
     PopulacaoEstimada: `7143`
 
