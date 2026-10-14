@@ -219,6 +219,15 @@ o ModeloPreditivo guarda a versão e a acurácia do modelo de IA treinado, e con
 
 O Diagrama esta localizando na pasta doc sendo um arquivo chamado Diagrama de classes 7.1.png
 
+
+### 7.2 Fluxo Principal: Cadastro da Entidade Principal
+
+* **Objetivo:** Criar a função que permite salvar um novo registro no sistema (ex: um morador reportando um problema) — este é o primeiro passo de todo o fluxo de monitoramento da plataforma.
+* **Como funciona na prática:**
+  1. O **Usuário** (morador ou agente) aciona o método `registrarOcorrencia()` no aplicativo móvel.
+  2. O sistema valida as informações e instancia um novo **Sensor** com origem `manual`, vinculando-o à respectiva **Área Monitorada**.
+  3. A partir desse registro, o sistema dispara um **Alerta** preliminar para notificar os gestores e equipes responsáveis, garantindo uma resposta rápida à comunidade isolada.
+  4. 
 # 8. Tecnologias
 
 ### 1️⃣ Front-end (Aplicativo Móvel):
