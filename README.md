@@ -244,7 +244,7 @@ GitHub (repositório, Issues e Projects/Kanban) - utilizado para armazenar o có
 
 # 9. Arquitetura do Sistema
 
-Texto explicando>
+O Modelo C4 é uma abordagem para documentar arquitetura de software através de níveis crescentes de detalhe — como um mapa que vai de uma visão geral até o código. Nesta entrega, são apresentados os dois primeiros níveis: **Contexto** (visão geral do sistema e seus usuários) e **Contêineres** (os blocos internos que compõem o sistema).
 
 ### 9.1 Diagrama de Contexto (Nível 1)
 
