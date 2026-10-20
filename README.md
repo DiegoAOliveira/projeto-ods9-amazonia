@@ -168,6 +168,21 @@ Esse alerta pode ser relacionado ao dado de que apenas **38,9% da população de
 
 ---
 
+### `AnaliseIA` — Registro de cada chamada feita à API de Inteligência Artificial.
+
+**Atributos:** `id`, `prompt`, `resposta`, `dataHora`, `alertaGeradoId` (Alerta gerado, se houver)
+
+**Métodos:** `enviarPrompt()`
+
+**Resumo:** a AnaliseIA guarda o histórico de interações com a API do Groq (modelo `openai/gpt-oss-120b`): o prompt enviado com os dados do Sensor e a resposta recebida, usada para decidir a gravidade do Alerta.
+
+**Exemplo real:**
+
+    prompt: "Analise esta ocorrência... Tipo: Falta de água. Local: Santa Rosa do Purus."
+    resposta: "CRITICO: a ausência de água tratada representa risco imediato à saúde da comunidade."
+
+---
+
 ### `Relatório` — Registro das condições e ocorrências identificadas pelo sistema.
 
 **Atributos:** `id`, `titulo`, `periodo`, `dados`, `indicadores`, `dataGeracao`
@@ -199,21 +214,23 @@ o ModeloPreditivo guarda a versão e a acurácia do modelo de IA treinado, e con
 
 ---
 
-### Relações entre as 7 classes
+### Relações entre as 8 classes
 
  `Comunidade` **tem várias** `AreaMonitorada`
- 
+
  `AreaMonitorada` **tem vários** `Sensor`
- 
+
  `Sensor` **pode gerar** `Alerta`
- 
+
+ `Sensor` **é analisado por** `AnaliseIA`
+
+ `AnaliseIA` **pode gerar** `Alerta`
+
  `Usuário` **recebe** `Alerta` e **visualiza** `Relatório`
- 
+
  `Usuário` **pode registrar** `Sensor` (quando a origem é manual)
- 
- `ModeloPreditivo` **analisa** `AreaMonitorada`
- 
- `ModeloPreditivo` **pode gerar** `Alerta`
+
+ `ModeloPreditivo` **analisa** `AreaMonitorada` *(planejado — fase futura)*
  
 # 7.1 Diagrama de Classes
 
