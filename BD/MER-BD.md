@@ -41,3 +41,10 @@ Entre os principais relacionamentos estão:
 O MER serve como base para a organização dos dados do Amazônia Inteligente, contribuindo para a rastreabilidade das ocorrências, o acompanhamento das áreas monitoradas e a futura integração com recursos de inteligência artificial e análise preditiva.
 
 O modelo poderá evoluir conforme o desenvolvimento do projeto e a implementação de novas funcionalidades.
+
+---
+
+### 📊 Diagrama do banco de dados
+
+![Diagrama MER do Amazônia Inteligente](MER-Amazonia-Inteligente.png)
+
