@@ -1,50 +1,95 @@
-## 🗄️ Modelo Entidade-Relacionamento (MER)
+# 🗄️ Diagrama MER — Banco de Dados
 
-O Modelo Entidade-Relacionamento (MER) do **Amazônia Inteligente** representa a estrutura do banco de dados desenvolvido para organizar as informações relacionadas ao monitoramento de áreas e serviços essenciais nas comunidades de Santa Rosa do Purus – AC.
+Este diagrama representa a estrutura do banco de dados do sistema, apresentando
+as entidades, seus principais atributos, chaves primárias (PK), chaves
+estrangeiras (FK) e os relacionamentos existentes entre elas.
 
-O modelo foi desenvolvido com o objetivo de estruturar os dados de maneira organizada, estabelecer relacionamentos entre as entidades e facilitar o armazenamento, a consulta e a análise das informações utilizadas pelo sistema.
+```mermaid
+erDiagram
 
-### 📌 Entidades do sistema
+    USUARIO {
+        int id_usuario PK
+        string nome
+        string email
+        string senha
+        string tipo
+    }
 
-O banco de dados é composto por oito entidades principais:
+    COMUNIDADE {
+        int id_comunidade PK
+        string nome
+        string descricao
+    }
 
-- **Usuario:** armazena os dados dos usuários cadastrados, incluindo nome, e-mail, senha e perfil de acesso.
-- **Comunidade:** registra as comunidades monitoradas, sua localização e a população estimada.
-- **Area Monitorada:** representa as áreas acompanhadas pelo sistema, permitindo identificar seu tipo e status atual.
-- **Sensor:** armazena registros de monitoramento, incluindo tipo, localização, valores medidos, origem dos dados e status.
-- **Alerta:** registra ocorrências identificadas pelo sistema, classificando-as por tipo, gravidade e status.
-- **Analise IA:** armazena os prompts e as respostas das análises realizadas por inteligência artificial, vinculando-as aos registros analisados e aos alertas relacionados.
-- **Relatorio:** organiza informações consolidadas para geração de relatórios e acompanhamento dos indicadores do sistema.
-- **Modelo Preditivo:** representa os modelos utilizados em futuras análises preditivas, incluindo versão, acurácia e data de treinamento.
+    LOCALIZACAO {
+        int id_localizacao PK
+        string cidade
+        string bairro
+        string endereco
+        int id_comunidade FK
+    }
 
-### 🔗 Relacionamentos
+    AREA_MONITORADA {
+        int id_area PK
+        string nome
+        string descricao
+        int id_localizacao FK
+    }
 
-O modelo estabelece relacionamentos entre as entidades por meio de chaves primárias e estrangeiras, garantindo a integridade referencial dos dados.
+    SENSOR {
+        int id_sensor PK
+        string tipo
+        float valor_atual
+        datetime data_atualizacao
+        int id_area FK
+    }
 
-Entre os principais relacionamentos estão:
+    STATUS {
+        int id_status PK
+        string situacao
+        datetime data_hora
+        int id_sensor FK
+    }
 
-- Uma comunidade pode possuir várias áreas monitoradas.
-- Uma área monitorada pode estar associada a vários registros de sensores.
-- Um usuário pode ser responsável pelo registro de dados e pelo recebimento de alertas.
-- Um sensor pode estar relacionado a diferentes alertas e análises de inteligência artificial.
-- Uma análise de IA pode estar vinculada a um alerta gerado.
-- Uma área monitorada pode estar associada a modelos preditivos.
+    ALERTA {
+        int id_alerta PK
+        string mensagem
+        datetime data_hora
+        int id_usuario FK
+        int id_sensor FK
+    }
 
-### 🛠️ Tecnologias utilizadas
+    RELATORIO {
+        int id_relatorio PK
+        datetime data_geracao
+        string descricao
+        int id_usuario FK
+        int id_area FK
+    }
 
-- **MySQL:** sistema gerenciador do banco de dados relacional.
-- **SQL:** linguagem utilizada para criação das tabelas, definição dos relacionamentos e manipulação dos dados.
-- **dbdiagram.io:** ferramenta utilizada para representar visualmente o modelo e facilitar a compreensão da estrutura do banco.
+    MODELO_PREDITIVO {
+        int id_modelo PK
+        string resultado
+        datetime data_analise
+        int id_sensor FK
+    }
 
-### 🎯 Objetivo do modelo
 
-O MER serve como base para a organização dos dados do Amazônia Inteligente, contribuindo para a rastreabilidade das ocorrências, o acompanhamento das áreas monitoradas e a futura integração com recursos de inteligência artificial e análise preditiva.
+    COMUNIDADE ||--o{ LOCALIZACAO : "possui"
 
-O modelo poderá evoluir conforme o desenvolvimento do projeto e a implementação de novas funcionalidades.
+    LOCALIZACAO ||--o{ AREA_MONITORADA : "define"
 
----
+    AREA_MONITORADA ||--o{ SENSOR : "possui"
 
-### 📊 Diagrama do banco de dados
+    SENSOR ||--o{ STATUS : "registra"
 
-![Diagrama MER do Amazônia Inteligente](MER-Amazonia-Inteligente.png)
+    SENSOR ||--o{ ALERTA : "gera"
 
+    SENSOR ||--o{ MODELO_PREDITIVO : "fornece dados"
+
+    USUARIO ||--o{ ALERTA : "recebe"
+
+    USUARIO ||--o{ RELATORIO : "gera"
+
+    AREA_MONITORADA ||--o{ RELATORIO : "compõe"
+```
