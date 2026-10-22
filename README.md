@@ -68,8 +68,6 @@ No fim, a função principal da IA é identificar problema rápido e de forma au
 
 # 7. Modelagem Inicial — POO
 
----
-
 ### `Usuário` — Pessoa que utiliza o aplicativo.
 
 **Atributos:** `id`, `nome`, `email`, `senha`, `papel` (morador, agente de saúde ou gestor)
