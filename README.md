@@ -168,6 +168,21 @@ Esse alerta pode ser relacionado ao dado de que apenas **38,9% da população de
 
 ---
 
+### `AnaliseIA` — Registro de cada chamada feita à API de Inteligência Artificial.
+
+**Atributos:** `id`, `prompt`, `resposta`, `dataHora`, `alertaGeradoId` (Alerta gerado, se houver)
+
+**Métodos:** `enviarPrompt()`
+
+**Resumo:** a AnaliseIA guarda o histórico de interações com a API do Groq (modelo `openai/gpt-oss-120b`): o prompt enviado com os dados do Sensor e a resposta recebida, usada para decidir a gravidade do Alerta.
+
+**Exemplo real:**
+
+    prompt: "Analise esta ocorrência... Tipo: Falta de água. Local: Santa Rosa do Purus."
+    resposta: "CRITICO: a ausência de água tratada representa risco imediato à saúde da comunidade."
+
+---
+
 ### `Relatório` — Registro das condições e ocorrências identificadas pelo sistema.
 
 **Atributos:** `id`, `titulo`, `periodo`, `dados`, `indicadores`, `dataGeracao`
@@ -199,26 +214,37 @@ o ModeloPreditivo guarda a versão e a acurácia do modelo de IA treinado, e con
 
 ---
 
-### Relações entre as 7 classes
+### Relações entre as 8 classes
 
  `Comunidade` **tem várias** `AreaMonitorada`
- 
+
  `AreaMonitorada` **tem vários** `Sensor`
- 
+
  `Sensor` **pode gerar** `Alerta`
- 
+
+ `Sensor` **é analisado por** `AnaliseIA`
+
+ `AnaliseIA` **pode gerar** `Alerta`
+
  `Usuário` **recebe** `Alerta` e **visualiza** `Relatório`
- 
+
  `Usuário` **pode registrar** `Sensor` (quando a origem é manual)
- 
- `ModeloPreditivo` **analisa** `AreaMonitorada`
- 
- `ModeloPreditivo` **pode gerar** `Alerta`
+
+ `ModeloPreditivo` **analisa** `AreaMonitorada` *(planejado — fase futura)*
  
 # 7.1 Diagrama de Classes
 
 O Diagrama esta localizando na pasta doc sendo um arquivo chamado Diagrama de classes 7.1.png
 
+
+### 7.2 Fluxo Principal: Cadastro da Entidade Principal
+
+* **Objetivo:** Criar a função que permite salvar um novo registro no sistema (ex: um morador reportando um problema) — este é o primeiro passo de todo o fluxo de monitoramento da plataforma.
+* **Como funciona na prática:**
+  1. O **Usuário** (morador ou agente) aciona o método `registrarOcorrencia()` no aplicativo móvel.
+  2. O sistema valida as informações e instancia um novo **Sensor** com origem `manual`, vinculando-o à respectiva **Área Monitorada**.
+  3. A partir desse registro, o sistema dispara um **Alerta** preliminar para notificar os gestores e equipes responsáveis, garantindo uma resposta rápida à comunidade isolada.
+  4. 
 # 8. Tecnologias
 
 ### 1️⃣ Front-end (Aplicativo Móvel):
