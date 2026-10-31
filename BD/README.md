@@ -36,6 +36,29 @@ Entre os principais relacionamentos estão:
 - **SQL:** linguagem utilizada para criação das tabelas, definição dos relacionamentos e manipulação dos dados.
 - **dbdiagram.io:** ferramenta utilizada para representar visualmente o modelo e facilitar a compreensão da estrutura do banco.
 
+---
+
+### 🚀 Como Executar os Scripts SQL
+
+Os scripts DDL e DML estão localizados nesta pasta:
+- `amazonia_db.sql`: Script DDL para criação da base de dados `amazonia_db` e de todas as 8 tabelas relacionais com PKs, FKs e restrições de integridade.
+- `seed.sql`: Script DML contendo dados iniciais de demonstração (Comunidade Santa Rosa do Purus, 6 áreas do ODS 9, usuários, sensores e alertas).
+
+#### Execução no Terminal MySQL:
+```bash
+# 1. Criação da base e tabelas (DDL)
+mysql -u root -p < BD/amazonia_db.sql
+
+# 2. Carga inicial de dados (DML)
+mysql -u root -p < BD/seed.sql
+```
+
+#### Execução no MySQL Workbench / DBeaver:
+1. Abra e execute o arquivo `BD/amazonia_db.sql`.
+2. Abra e execute o arquivo `BD/seed.sql`.
+
+---
+
 ### 🎯 Objetivo do modelo
 
 O MER serve como base para a organização dos dados do Amazônia Inteligente, contribuindo para a rastreabilidade das ocorrências, o acompanhamento das áreas monitoradas e a futura integração com recursos de inteligência artificial e análise preditiva.

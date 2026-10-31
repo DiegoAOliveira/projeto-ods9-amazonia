@@ -1,4 +1,4 @@
-package com.amazoniainteligente.model;
+package Model;
 
 import java.time.LocalDateTime;
 

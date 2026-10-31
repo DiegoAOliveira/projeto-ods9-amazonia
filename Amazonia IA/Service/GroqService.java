@@ -1,4 +1,4 @@
-package com.amazoniainteligente.service;
+package Service;
 
 import java.io.IOException;
 import java.net.URI;
