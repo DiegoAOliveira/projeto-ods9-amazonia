@@ -1,4 +1,4 @@
-package servise;
+package Service;
 
 import Model.Alerta;
 import Model.AnaliseIA;
@@ -37,6 +37,7 @@ public class Main {
             System.out.println("3 - Listar sensores");
             System.out.println("4 - Listar alertas gerados");
             System.out.println("5 - Listar histórico de análises da IA");
+            System.out.println("6 - Iniciar Servidor HTTP da API (Porta 8080 para App Flutter)");
             System.out.println("0 - Sair");
             System.out.print("Escolha uma opção: ");
 
@@ -48,12 +49,22 @@ public class Main {
                 case "3" -> listarSensores();
                 case "4" -> listarAlertas();
                 case "5" -> listarAnalises();
+                case "6" -> iniciarServidorApi();
                 case "0" -> {
                     System.out.println("Até mais!");
                     return;
                 }
                 default -> System.out.println("Opção inválida.");
             }
+        }
+    }
+
+    private static void iniciarServidorApi() {
+        try {
+            ApiServer.iniciarServidor(8080);
+            System.out.println("Servidor ativo e pronto para receber requisições do App Flutter.");
+        } catch (IOException e) {
+            System.err.println("Erro ao iniciar servidor HTTP: " + e.getMessage());
         }
     }
 
@@ -175,19 +186,19 @@ public class Main {
     private static void listarSensores() {
         System.out.println("\n-- Sensores cadastrados --");
         if (sensores.isEmpty()) System.out.println("(nenhum ainda)");
-        sensores.forEach(System.out::println);
+        sensores.forEach(s -> System.out.println(s));
     }
 
     private static void listarAlertas() {
         System.out.println("\n-- Alertas gerados --");
         if (alertas.isEmpty()) System.out.println("(nenhum ainda)");
-        alertas.forEach(System.out::println);
+        alertas.forEach(a -> System.out.println(a));
     }
 
     private static void listarAnalises() {
         System.out.println("\n-- Histórico de análises da IA --");
         if (analises.isEmpty()) System.out.println("(nenhuma ainda)");
-        analises.forEach(System.out::println);
+        analises.forEach(an -> System.out.println(an));
     }
 
     private static String carregarApiKey() {
