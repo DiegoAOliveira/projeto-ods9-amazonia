@@ -245,9 +245,11 @@ O Diagrama esta localizando na pasta doc sendo um arquivo chamado Diagrama de cl
   4. 
 # 8. Tecnologias
 
-### 1️⃣ Front-end (Aplicativo Móvel):
+### 1️⃣ Front-end (Aplicativo Móvel & Web):
 
-Flutter + Dart - será utilizado para desenvolver o aplicativo móvel, permitindo que a mesma base de código seja utilizada para Android e iOS. O aplicativo apresentará aos moradores informações sobre conectividade, energia, saneamento, Saude, educação e meio ambiente, além de exibir os níveis de situação Normal, Alerta e Crítico e receber notificações de alertas.
+Flutter + Dart - desenvolvido na pasta `Flutter.app/`, permitindo que a mesma base de código seja executada em Android, iOS e Web. O aplicativo apresenta informações sobre as 6 frentes (Conectividade, Energia, Saneamento, Saúde, Educação e Meio Ambiente), dados de Santa Rosa do Purus (AC), níveis de situação (Normal, Atenção e Crítico/Emergência) e tela com análise inteligente de IA.
+
+Para instruções completas de como rodar o app em qualquer máquina, consulte o [Guia de Execução do Flutter](Flutter.app/README.md).
 
 ### 2️⃣ Back-end / API:
 Java — linguagem já estudada na disciplina de POO, reaproveitando o conhecimento da sala de aula no desenvolvimento do back-end.
